@@ -1,0 +1,339 @@
+.navv{
+    padding-bottom: 35px !important;
+  }
+  .home{
+    width: 118.609px;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.25) !important;
+  text-align: center;
+  font-family: "Roboto Flex";
+  font-size: 27.66px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  }
+  .home:hover{
+    color: #000 !important;
+  
+  }
+  .logo {
+    margin-right: auto;
+    background: url(../Assets/logo.png)  50% / cover no-repeat;
+    width: 77.113px;
+    height: 79.843px;
+    flex-shrink: 0;
+  
+  }
+  
+  .svg {
+    width: 23.707px;
+    margin: 13px;
+    flex-shrink: 0;
+    stroke-width: 0.95px;
+    stroke: #000;
+  }
+  
+  #but-join {
+    border-radius: 20.454px !important;
+    border: 1.278px solid #939292;
+    width: auto;
+    height: auto;
+  
+    display: flex;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 26.982px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-left: 25px;
+  }
+  
+  #but-contact {
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 23.017px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 26.985px !important;
+    background: #0057D1;
+    width: auto;
+    height: auto;
+    margin: 9px;
+  }
+  
+  .img3 {
+    margin-top: 95px !important;
+  }
+  
+  .txt-next-img {
+    margin-top: 225px !important;
+    margin-bottom: 25px !important;
+    margin-left: 25px;
+  }
+  
+  #your-skills {
+    color: #0057D1;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 243.96px;
+  }
+  
+  #AI {
+    color: #000;
+    font-family: "Roboto Flex";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    width: 669.891px;
+    height: 97px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  #text1 {
+    color: #939292;
+    font-family: "Roboto Flex";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 492.92px;
+    height: 87px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  #start {
+    display: flex;
+    width: 243.96px;
+    height: 72px;
+    padding: 17px 57.007px 17px 57.954px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #0057D1;
+    margin-bottom: 35px;
+  }
+  
+  #get {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+  }
+  
+  #text2 {
+    width: 416.927px;
+    color: rgba(0, 0, 0, 0.73);
+    font-family: "Roboto Flex";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  
+  #img-alex {
+    width: 32.995px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 16.5px;
+  }
+  
+  #Explore-course {
+    display: flex;
+    width: 966.505px;
+    height: 90px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: "Roboto Flex";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 125px;
+    margin-left: 25px;
+  }
+  
+  .explore-txt {
+    margin: 40px;
+  }
+  
+  #explore-txt {
+    width: 631.648px;
+    color: #939292;
+    font-family: "Roboto Flex";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  #img-exp {
+    width: 226.462px;
+    height: 224px;
+    flex-shrink: 0;
+    border-radius: 14.847px;
+  }
+  
+  #contact {
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 60px;
+  }
+  
+  #txt-contact {
+    color: #939292;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 55px;
+  }
+  
+  #txt-arrow {
+    color: #0057D1;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 8px;
+  }
+  
+  #txt-logo {
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 35px;
+  }
+  
+  #need-help {
+    display: flex;
+    height: 37px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #939292;
+    text-align: center;
+    font-family: "Roboto Flex";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f4f8;
+    z-index: 1;
+  }
+  
+  .content {
+    /* width: auto; */
+    border-radius: 29.571px;
+    background: linear-gradient(74deg, #262E3D 19.9%, #667BA3 87.74%);
+  }
+  
+  .content .master{
+    color: #FFF !important;
+    font-family: "Roboto Flex";
+    font-size: 61.684px !important;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  #start-join {
+    color: #CCC;
+    font-family: "Roboto Flex";
+    font-size: 17.743px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 747.171px;
+  }
+  
+  .explore-button {
+    background: #0057D1;
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 28.367px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: auto;
+    border-radius: 36.594px;
+    margin: 30px;
+  }
+  
+  .explore-button:hover {
+    background-color: #0056b3;
+  }
+  
+  #rating {
+    color: #9F9595;
+  font-family: Roboto;
+  font-size: 26.614px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-left: 50px;
+  }
+  
+  .right {
+    text-align: right;
+    
+  }
+  .right #learn{
+    position: absolute;
+    top: 130px;
+    right: 30px;
+    height:500px ;
+    flex-shrink: 0px;
+  }
+  #img150{
+    width: 45.343px;
+  height: 45.343px;
+  flex-shrink: 0;
+  border-radius: 22.671px;
+  border: 1.619px solid #000;
+  }

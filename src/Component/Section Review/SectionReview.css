@@ -1,0 +1,50 @@
+#body-section{
+    display: flex;
+    
+}
+
+#body-section #del-btn-course{
+    display: inline-flex;
+padding: 1px 20px 0px 15px;
+align-items: center;
+justify-content: center;
+gap: 16px;
+border-radius: 24px;
+border: 1px solid rgba(215, 38, 56, 0.35);
+color: #D72638;
+font-family: Roboto;
+font-size: 16.033px;
+font-style: normal;
+font-weight: 500;
+line-height: 34.356px; /* 214.286% */
+width: 150px;
+height: 40px;
+background-color: #FFFFFF;
+flex-shrink: 0;
+}
+
+#body-section #del-btn-course:hover{
+    background-color: #D72638;
+    color: #FFFFFF;
+}
+
+#body-section #review-btn-course{
+    width: 150px;
+height: 40px;
+background-color: #FFFFFF;
+flex-shrink: 0;
+display: inline-flex;
+padding: 1px 20px 0px 15px;
+align-items: center;
+gap: 10px;
+border-radius: 24px;
+border: 1px solid rgba(2, 119, 189, 0.50);
+color: #005DD1;
+font-family: Roboto;
+font-size: 16.033px;
+font-style: normal;
+font-weight: 500;
+line-height: 34.356px; /* 214.286% */
+margin-left: 180px;
+
+}

@@ -1,0 +1,119 @@
+.lesson-body{
+    background: #DBCAE5;
+    width: 100%;
+    height: 800px;
+    flex-shrink: 0;
+
+    justify-content: center;
+    text-align: center;
+  align-items: center;
+  background-blend-mode: lighten; 
+  padding: 130px;
+  
+
+}
+#back-btn{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.lesson-body .white-box{
+    width: 847.793px;
+    height: 565.462px;
+    flex-shrink: 0;
+    border-radius: 38.391px;
+    background: #FFF;
+
+    justify-content: center;
+    text-align: center;
+  align-items: center;
+  
+}
+
+.white-box #vid-title{
+    color: #000;
+font-family: Roboto;
+font-size: 36.647px;
+font-style: normal;
+font-weight: 700;
+line-height: 34.356px; /* 93.75% */
+padding-top: 30px;
+}
+.row-item{
+    /* display: block; */
+    /* gap: 10px; */
+    justify-content: center;
+    text-align: center;
+  align-items: center;
+
+}
+.row-item #label-vid{
+    display: block;
+    width: 147.078px;
+    height: 35.114px;
+    flex-shrink: 0;
+    color: #9CA3AF;
+    font-family: Roboto;
+    font-size: 16.033px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.356px; /* 214.286% */
+    text-align: start;
+    margin-bottom: 50px;
+   margin-left: 200px;
+}
+.row-item #input-vid{
+    width: 419px;
+    height: 41.234px;
+    flex-shrink: 0;
+    border-radius: 11.452px;
+    border: 1.145px solid #D9C6E3;
+    background: #FFF;
+}
+
+#last-two-btn{
+    display: flex;
+    gap: 100px;
+}
+
+#last-two-btn #btn-vid2{
+    display: flex;
+width: 195px;
+height: 45.45px;
+padding: 20.556px 68.52px;
+justify-content: center;
+align-items: center;
+gap: 8.565px;
+flex-shrink: 0;
+border-radius: 85.65px;
+background: #765378;
+margin-left: 300px;
+
+color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+#last-two-btn #btn-vid1{
+    display: flex;
+width: 195px;
+padding: 11.575px;
+justify-content: center;
+align-items: center;
+gap: 19.589px;
+border-radius: 89.041px;
+border: 0.89px solid rgba(0, 0, 0, 0.25);
+background: #FFF;
+
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 18.699px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}

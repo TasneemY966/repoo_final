@@ -1,0 +1,38 @@
+#row-track{
+    /* display: flex;
+    justify-content: space-between; */
+    /* margin-top: 20px; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    
+
+}
+#row-track #label-track{
+    color: #9CA3AF;
+font-family: Roboto;
+font-size: 16.033px;
+font-style: normal;
+font-weight: 500;
+line-height: 34.356px; /* 214.286% */
+}
+#row-track #input-track{
+    border-radius: 11.452px;
+border: 1.145px solid #D9C6E3;
+background: #FFF;
+width: 469.538px;
+height: 41.1px;
+flex-shrink: 0;
+}
+#row-track #input-track:focus{
+    border: 1.145px solid #D72638;
+}
+#row-track #txtArea-track{
+    border-radius: 11.452px;
+border: 1.145px solid #D9C6E3;
+background: #FFF;
+width: 469.538px;
+height: 132.717px;
+flex-shrink: 0;
+}

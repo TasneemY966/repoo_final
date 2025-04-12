@@ -1,0 +1,216 @@
+.course-header{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .LEARNQUEST{
+    color: #765378;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 53.053px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0px; /* 0% */
+    letter-spacing: 1.061px;
+    color: #765378;
+    font-family: Roboto;
+    font-size: 45.804px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 0.916px;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .LEARNQUEST:hover{
+    transform: scale(1.1);
+  
+  }
+  .search_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    padding-left: 170px;
+   
+  }
+   .search_div #search{
+        /* width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid #939292;
+        padding-left: 20px; */
+        /* font-size: 20px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #939292; */
+        display: flex;
+        width: 592.957px;
+        height: 63.285px;
+        padding: 15px 504.059px 18.285px 13.897px;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 28.141px;
+        border: 1.759px solid #EEE6F2;
+
+        color: #CDB4DB;
+        font-family: "Roboto Flex";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    #search:focus{
+        outline: none;
+    }
+  .search_div #search-buttom {
+
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    width: 49.121px;
+    height: 49.121px;
+    flex-shrink: 0;
+    fill: #CDB4DB;
+    stroke-width: 1.17px;
+    stroke: #EEE6F2;
+    border: none;
+  }
+ .course-icons{
+    /* float: right; */
+    display: flex;
+    width: 156px;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    padding-left: 300px;
+ }
+.course-icons #icon {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+  .course-icons #circle {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 88px;
+    height: 62px;
+    flex-shrink: 0;
+  }
+  
+
+  .video-body{
+    display: flex;
+    
+  }
+  .video-body #menu-icon-bar{
+    position: absolute;
+    top: 10s0px;
+    left: 10px;
+  }
+  .video-body .menu-bar{
+    width: 140px;
+    height: 1024px;
+    background: #FFF;
+  }
+  .menu-bar #menuu{
+    display: inline-flex;
+    height: 100px;
+    width: 50px;
+    padding: 26px 18px 851px 30px;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    border-right: 1px solid #EEE6F2;
+    
+  }
+  .video{
+    margin-right: 20px;
+    margin-left: 10px;
+
+  }
+  .video #vid{
+    display: flex;
+    width: 920px;
+    height: 601px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 47.595px;
+    background: #292929;
+  }
+  .video #two-button{
+    display: flex;
+    
+  }
+ 
+
+  #two-button #Material{
+    display: flex;
+    width: 119px;
+    height: 49px;
+    padding: 15.675px 52.249px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.531px;
+    flex-shrink: 0;
+    border:none;
+    background: none;
+    color: #CDB4DB;
+    margin: 30px;
+    cursor: pointer;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    cursor: pointer;
+ }
+#two-button #Material:hover{
+    background-color: #EEE6F2;
+    color: #765378;
+    width: 119px;
+    height: 49px;
+    font-weight: bold;
+    border-bottom: 6px solid #765378;
+}
+#Lecture-File{
+    display: flex;
+    gap: 10px;
+}
+/*thrid div*/
+.video-details{
+    width: 300px;
+    /* display: inline; */
+    flex-shrink: 0;
+    
+}
+.video-details .next-prev{
+    display: inline;
+    gap: 20px;
+}
+.video-details #arrow{
+    display: inline;
+}
+.video-details .next-prev #n-p-btn{
+    display: flex;
+    width: 102.396px;
+    height: 27.623px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #765378;
+    font-family: "Roboto Flex";
+    font-size: 23.901px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: none;
+    border: none;
+}
+.video-details #cc-item{
+  float: right;
+}

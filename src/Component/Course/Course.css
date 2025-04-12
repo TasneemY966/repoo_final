@@ -1,0 +1,236 @@
+.course-header{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .LEARNQUEST{
+    color: #765378;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 53.053px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0px; /* 0% */
+    letter-spacing: 1.061px;
+    color: #765378;
+    font-family: Roboto;
+    font-size: 45.804px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 0.916px;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .LEARNQUEST:hover{
+    transform: scale(1.1);
+  
+  }
+  .search_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    padding-left: 170px;
+   
+  }
+   .search_div #search{
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid #939292;
+        padding-left: 20px;
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #939292;
+    }
+    #search:focus{
+        outline: none;
+    }
+  .search_div #search-buttom {
+
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    width: 49.121px;
+    height: 49.121px;
+    flex-shrink: 0;
+    fill: #CDB4DB;
+    stroke-width: 1.17px;
+    stroke: #EEE6F2;
+    border: none;
+  }
+ .course-icons{
+ 
+    display: flex;
+    width: 156px;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    padding-left: 300px;
+ }
+.course-icons #icon {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+  .course-icons #circle {
+    font-size: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 88px;
+    height: 62px;
+    flex-shrink: 0;
+  }
+  
+/*body*/
+ .course-body{
+    display: flex;
+    gap: 50px;
+ }
+ .course-materials{
+    width: 300px;
+    height: 1392px;
+    flex-shrink: 0;
+    justify-content: center;
+    padding-left: 30px;
+    padding-top: 80px;
+    padding-bottom: 900px;
+    text-align: center;
+   
+
+}
+ .course-materials #course_img{
+    width: 280px;
+    height: 245px;
+    flex-shrink: 0;
+    border-radius: 42px;
+}
+ .course-materials #oop-course{
+    color: #765378;
+    font-family: "Roboto Flex";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+ }
+ .course-materials #teacher{
+    color: #5B6680;
+font-family: "Roboto Flex";
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;;
+ }
+ .course-materials #select-option{
+    color: #0F1114;
+font-family: "Schibsted Grotesk";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+border: none;
+ }
+
+ .course-contents{
+    background-color: #ffffff;
+    width: 720px;
+    height: 1392px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #D9C6E3;
+    /* margin: 31px; */
+ }
+
+
+ .track-progress{
+    /* display: inline-flex; */
+    margin-top: 90px;
+    height: 102.353px;
+    width: 300px;
+    padding: 30.706px 6.147px 30.637px 13.306px;
+    /* justify-content: flex-end; */
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #CDB4DB;
+    background: #EEE6F2;
+    float: right;
+    margin-left: 90px;
+ }
+ .track-progress #track{
+    display: flex;
+    width: 120.763px;
+    height: 22.89px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #0F1114;
+    font-family: "Roboto Flex";
+    font-size: 13.465px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+ }
+
+ .chatBot2{
+    position: absolute;
+    top : 290px;
+    right: 5px;
+    left: 650px;
+    backdrop-filter: blur(1.71875px);
+    width: 55px;
+    height: 55px;
+ }
+
+  /* Footer */
+  .settings-footer2 {
+    background-color: #765378;
+    color: #FFFFFF;
+    text-align: center;
+    width: 1440px;
+    height: 250px;
+    flex-shrink: 0;
+    padding-top: 50px;
+    padding-bottom: 10px
+  }
+  
+  .footer-links #link {
+    color: #FFF;
+    margin: 0px 50px;
+    text-decoration: none;
+  }
+  .social-icons {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 15px;
+    padding-right: 30px;
+    /* float: left; */
+    display: flex;
+    gap: 10px;
+  }
+ 
+  .social-icons i:hover {
+    color: #007bff;
+  }
+  .settings-footer2 #copy{
+    color: #939292;
+    font-family: "Roboto Flex";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-bottom: 30px; */
+    margin-right: 40px;
+    text-align: end;
+    /* padding-bottom: 40px; */
+  }
+  
+  
