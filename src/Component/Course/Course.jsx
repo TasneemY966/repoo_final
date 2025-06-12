@@ -3,16 +3,16 @@ import Select from "react-select";
 import {  Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import "./Course.css";
-import courseC from "../Assets/course_1.png";
+import courseC from "../../Assets/course_1.png";
 
-const options = [
+
+
+export default function Course  (){
+   const options = [
     { value: "option1", label: "Model 1" },
     { value: "option2", label: "Model 2" },
     { value: "option3", label: "Model 3" }
   ];
-
-const Course = ()=>{
-   
       const [selectedOption, setSelectedOption] = useState(null);
    return(
     <>
@@ -96,7 +96,7 @@ const Course = ()=>{
 
 
     {/* footer */}
-    <footer className="settings-footer2">
+    {/* <footer className="settings-footer2">
             <div className="footer-links">
               <a href="#about" id="link">About Us</a>
               <a href="#courses" id="link">Courses</a>
@@ -133,9 +133,8 @@ const Course = ()=>{
             </svg>
             </div>
             <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-          </footer>
+          </footer> */}
         
 </>
 );
 };
-export {Course};

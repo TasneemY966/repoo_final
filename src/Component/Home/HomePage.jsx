@@ -1,70 +1,77 @@
-import React from "react";
-import { Navbar, NavDropdown, Button, Form, Container, Nav, Row, Col } from 'react-bootstrap';
-import image from "../Assets/splash3.png";
-import image1 from "../Assets/splash2.png";
-import image2 from "../Assets/alex.png";
-import image3 from "../Assets/explore1.png";
-import image4 from "../Assets/explore2.png";
-import image5 from "../Assets/explore3.png";
-import image6 from "../Assets/explore4.png";
-import image7 from "../Assets/explore5.png";
-import circle from "../Assets/img150k.png";
+
+import { Navbar,  Button, Form, Container, Nav, Row, Col } from 'react-bootstrap';
+import image from "../../Assets/home/splash3.png";
+import image1 from "../../Assets/home/img150k.png";
+import image2 from "../../Assets/home/Alex.png";
+import image3 from "../../Assets/home/explore1.png";
+import image4 from "../../Assets/home/explore2.png";
+import image5 from "../../Assets/home/explore3.png";
+import image6 from "../../Assets/home/explore4.png";
+import image7 from "../../Assets/home/explore5.png";
 import './Home.css';
 import { Link } from "react-router-dom";
+// import Footer from "../Footer/footer";
 
- 
-const Home = () => {
+import React from 'react'
+
+ function Home() {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary navv">
-        <Container fluid>
-          {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          {/* <Navbar.Collapse id="navbarScroll"> */}
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Link to="/home" id="link" className="home">Home</Link>
-            <Link to="/About_Us" id="link" className="home">About Us</Link>
-
-          </Nav>
-          <img className="logo"></img>
-          <Button id="but-join" variant="light" size="sm"> <Link to="/SignUp" id="link"className="home">Join Us</Link>
-            <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-              <path d="M25.3782 12.1904C25.9542 11.6144 25.9542 10.6805 25.3782 10.1046L15.9921 0.718388C15.4161 0.142406 14.4822 0.142406 13.9063 0.718388C13.3303 1.29437 13.3303 2.22822 13.9063 2.8042L22.2495 11.1475L13.9063 19.4907C13.3303 20.0667 13.3303 21.0006 13.9063 21.5765C14.4822 22.1525 15.4161 22.1525 15.9921 21.5765L25.3782 12.1904ZM0.62793 12.6224H24.3353V9.67257H0.62793V12.6224Z" fill="black" />
-            </svg>
-          </Button>{' '}
-          <Link to="/ContactUs" id="ContactUs" className="ContactUs">
-          <Button className="but1" id="but-contact">Contact Us
-            <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-              <path d="M25.3782 12.1904C25.9542 11.6144 25.9542 10.6805 25.3782 10.1046L15.9921 0.718388C15.4161 0.142406 14.4822 0.142406 13.9063 0.718388C13.3303 1.29437 13.3303 2.22822 13.9063 2.8042L22.2495 11.1475L13.9063 19.4907C13.3303 20.0667 13.3303 21.0006 13.9063 21.5765C14.4822 22.1525 15.4161 22.1525 15.9921 21.5765L25.3782 12.1904ZM0.62793 12.6224H24.3353V9.67257H0.62793V12.6224Z" fill="black" />
-            </svg>
-          </Button>{' '}
-          </Link>
-          {/* </Navbar.Collapse> */}
-
-
-        </Container>
-      </Navbar>
+  <Navbar expand="lg" className="bg-body-white navv">
+      <Container fluid>
+        {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        {/* <Navbar.Collapse id="navbarScroll"> */}
+        <Nav
+          className="me-auto my-2 my-lg-0"
+          style={{ maxHeight: '100px' }}
+          navbarScroll
+        >
+          <Link to="" id="link" className="home">Home</Link>
+          <Link to="/about-us" id="link" className="about">About Us</Link>
   
-      <div className="container-fluid">
+        </Nav>
+        <Col>
+          <Link className=" logo-LEARNQUEST " id="link-logo" to='/home'><p id="logo-QUEST">L<i id="logo-EARN">EARN</i>QUEST</p></Link>
+        </Col>
+        <Link className="link-start" to='/sign-up'>
+        <Button className="but1" id="but-reg" variant="light" size="sm">Register
+          <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
+            <path d="M19.0324 12.5324C19.6025 11.9622 19.6025 11.0378 19.0324 10.4676L9.74099 1.17624C9.17083 0.606075 8.24641 0.606075 7.67624 1.17624C7.10608 1.74641 7.10608 2.67083 7.67624 3.24099L15.9352 11.5L7.67624 19.759C7.10608 20.3292 7.10608 21.2536 7.67624 21.8238C8.24641 22.3939 9.17083 22.3939 9.74099 21.8238L19.0324 12.5324ZM0 12.96L18 12.96V10.04L0 10.04L0 12.96Z" fill="black" />
+          </svg>
+        </Button>{' '}
+        </Link>
+        <Link className="link-start" to='contact-us'>
+        <Button className="but1" id="but-contact" size="sm">Contact Us
+          <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
+            <path d="M19.0324 12.5324C19.6025 11.9622 19.6025 11.0378 19.0324 10.4676L9.74099 1.17624C9.17083 0.606075 8.24641 0.606075 7.67624 1.17624C7.10608 1.74641 7.10608 2.67083 7.67624 3.24099L15.9352 11.5L7.67624 19.759C7.10608 20.3292 7.10608 21.2536 7.67624 21.8238C8.24641 22.3939 9.17083 22.3939 9.74099 21.8238L19.0324 12.5324ZM0 12.96L18 12.96V10.04L0 10.04L0 12.96Z" fill="white" />
+          </svg>
+        </Button>{' '}
+        </Link>
+  
+        {/* </Navbar.Collapse> */}
+  
+  
+      </Container>
+    </Navbar>
+    <div className="container-fluid">
         <div className="content">
-          <h2 className="master">Master Programming with AI-Powered Learning</h2>
+          <p className="master"><i id="master">Master Programming with AI-Powered Learning</i></p>
           <p id="start-join">
             Join Top Programming to unlock your potential with interactive courses, real-time assistance, and personalized progress tracking.
           </p>
 
           <div className="rating">
-            <Button className="explore-button">Explore Courses</Button>
-            <img src={circle} alt="Learning" id="img150" />
-            <img src={circle} alt="Learning" id="img150" />
-            <img src={circle} alt="Learning" id="img150" />
-            <img src={circle} alt="Learning" id="img150" />
+            <Link to='/home-course'>
+              <Button className="explore-button">Explore Courses</Button>
+            </Link>
+            <img src={image1} alt="Learning" id="img150" />
+            <img src={image1} alt="Learning" id="img150" />
+            <img src={image1} alt="Learning" id="img150" />
+            <img src={image1} alt="Learning" id="img150" />
             <span id="rating">+150k</span>
           </div>
-          <div id="ppp">
+          <div id="social">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39" fill="none">
               <path d="M20.0784 3.55322C17.9749 3.55322 15.892 3.96754 13.9486 4.77251C12.0053 5.57748 10.2395 6.75735 8.75207 8.24474C5.74814 11.2487 4.06055 15.3229 4.06055 19.5711C4.06055 26.651 8.65767 32.6577 15.0168 34.788C15.8177 34.9162 16.0739 34.4196 16.0739 33.9872V31.2801C11.637 32.2412 10.6919 29.1337 10.6919 29.1337C9.95512 27.2757 8.91396 26.7791 8.91396 26.7791C7.45633 25.786 9.02608 25.818 9.02608 25.818C10.6279 25.9302 11.4768 27.4679 11.4768 27.4679C12.8704 29.9026 15.225 29.1818 16.138 28.7974C16.2822 27.7562 16.6986 27.0514 17.1471 26.651C13.5912 26.2505 9.85901 24.873 9.85901 18.7702C9.85901 16.9922 10.4677 15.5666 11.5089 14.4293C11.3487 14.0289 10.788 12.363 11.669 10.2006C11.669 10.2006 13.0145 9.76815 16.0739 11.8345C17.3393 11.4821 18.7169 11.3059 20.0784 11.3059C21.4399 11.3059 22.8175 11.4821 24.0829 11.8345C27.1423 9.76815 28.4878 10.2006 28.4878 10.2006C29.3688 12.363 28.8081 14.0289 28.648 14.4293C29.6891 15.5666 30.2978 16.9922 30.2978 18.7702C30.2978 24.889 26.5496 26.2345 22.9776 26.635C23.5543 27.1315 24.0829 28.1086 24.0829 29.5983V33.9872C24.0829 34.4196 24.3392 34.9322 25.1561 34.788C31.5152 32.6417 36.0963 26.651 36.0963 19.5711C36.0963 17.4676 35.6819 15.3847 34.877 13.4413C34.072 11.4979 32.8921 9.73214 31.4047 8.24474C29.9173 6.75735 28.1515 5.57748 26.2082 4.77251C24.2648 3.96754 22.1819 3.55322 20.0784 3.55322Z" fill="white" />
             </svg>
@@ -76,9 +83,9 @@ const Home = () => {
             </svg>
           </div>
         </div>
-        <div className="right">
-          <img src={image1} alt="Learning" id="learn"/>
-        </div>
+        {/* <div className="right">
+          <img src={image1} id="img-big" alt="Learning" />
+        </div> */}
       </div>
 
       <Row>
@@ -86,104 +93,101 @@ const Home = () => {
           <p id="your-skills">Boost Your Coding Skills</p>
           <p id="AI">AI-Driven Learning Experience</p>
           <p id="text1">Discover how our AI tools customize your learning path, making programming more intuitive and effective.</p>
-          <Button type="submit" id="start"><p id="get">Get Start</p></Button>
-          <p id="text2">Top Programming has transformed my learning experience. The AI-driven insights are invaluable.</p>
+          <Link className="link-start" to='/sign'><Button id="start"><p id="get">Get Start</p></Button></Link>
+          <p id="text2">Learn Quest has transformed my learning experience. The AI-driven insights are invaluable.</p>
 
-          <p id="text2"><img src={image2} alt="Alex" id="img-alex" />Alex Johnson – Software Engineer</p>
+          <p id="text2"><img src={image2} alt="Alex" id="img-alex" />Alex Johnson</p>
         </Col>
         <Col md={6} className="img3" >
           <img src={image} alt="" className="img-fluid" />
         </Col>
       </Row>
-
-      <Row>
-        <Col >
+      <Col className="explore">
+        <Row>
+          {/* <Col className="Explore-course"> */}
           <p id="Explore-course">Explore Our Course Gallery</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="explore-txt">
-          <p id="explore-txt">Dive into our extensive library of courses, each designed to enhance your programming skills.</p>
+          {/* </Col> */}
+        </Row>
+        <Row>
+          <Col >
+            <p id="explore-txt">Dive into our extensive library of courses, each designed to enhance your programming skills.</p>
 
-        </Col>
-        <Col className="explore-txt">
-          <p id="explore-txt">From beginner to advanced, find the right course to elevate your coding journey.</p>
+          </Col>
+          <Col >
+            <p id="explore-txt2">From beginner to advanced, find the right course to elevate your coding journey.</p>
 
-        </Col>
-      </Row>
+          </Col>
+        </Row>
 
-      <Row >
-        <Col className="explore-txt"><img src={image3} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image4} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image5} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image6} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image7} alt="Alex" id="img-exp" /></Col>
-      </Row>
-      <Row>
-        <Col className="explore-txt"><img src={image3} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image4} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image5} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image6} alt="Alex" id="img-exp" /></Col>
-        <Col className="explore-txt"><img src={image7} alt="Alex" id="img-exp" /></Col>
-      </Row>
+        <Row className="imges">
+          <Col className="explore-txt"><img src={image3} alt="Alex" id="img-exp" /></Col>
+          <Col className="explore-txt"><img src={image4} alt="Alex" id="img-exp" /></Col>
+          <Col className="explore-txt"><img src={image5} alt="Alex" id="img-exp" /></Col>
+          <Col className="explore-txt"><img src={image6} alt="Alex" id="img-exp" /></Col>
+          <Col className="explore-txt"><img src={image7} alt="Alex" id="img-exp" /></Col>
+        </Row>
+      </Col>
+      <Row className="content-contact">
+        <Row><p id="contact">Connect with Us</p></Row>
+        <Row><Col><p id="txt-contact">Reach out to learn more about how Top Programming can enhance your coding journey.</p></Col></Row>
+        <Row className="done">
+          <Col>
+            <p id="txt-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="53" height="44" viewBox="0 0 53 44" fill="none">
+                <rect width="53" height="44" rx="8" fill="#CDB4DB" />
+                <path d="M6.02344 17.9446V31.2782C6.02344 32.1622 6.44647 33.0101 7.19947 33.6352C7.95247 34.2604 8.97376 34.6116 10.0387 34.6116H42.1605C43.2254 34.6116 44.2467 34.2604 44.9997 33.6352C45.7527 33.0101 46.1757 32.1622 46.1757 31.2782V17.9446L26.0996 24.6114L6.02344 17.9446Z" fill="white" />
+                <path d="M10.0387 9.7959C8.97376 9.7959 7.95247 10.1471 7.19947 10.7722C6.44647 11.3974 6.02344 12.2452 6.02344 13.1293L6.02344 16.4627L26.0996 23.1295L46.1757 16.4627V13.1293C46.1757 12.2452 45.7527 11.3974 44.9997 10.7722C44.2467 10.1471 43.2254 9.7959 42.1605 9.7959H10.0387Z" fill="white" />
+              </svg>
+              General Inquiries
+            </p>
+          </Col>
+        </Row>
+        <Row><p id="need-help">Have questions? We're here to help.</p></Row>
+        <Row><p id="txt-arrow">Contact Us
+          <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+            <path d="M15.7071 8.20711C16.0976 7.81658 16.0976 7.18342 15.7071 6.79289L9.34315 0.428932C8.95262 0.0384078 8.31946 0.0384078 7.92893 0.428932C7.53841 0.819457 7.53841 1.45262 7.92893 1.84315L13.5858 7.5L7.92893 13.1569C7.53841 13.5474 7.53841 14.1805 7.92893 14.5711C8.31946 14.9616 8.95262 14.9616 9.34315 14.5711L15.7071 8.20711ZM0 8.5L15 8.5V6.5L0 6.5L0 8.5Z" fill="#765378" />
+          </svg>
+        </p>
+        </Row>
 
-      <Row><p id="contact">Connect with Us</p></Row>
-      <Row><Col><p id="txt-contact">Reach out to learn more about how Top Programming can enhance your coding journey.</p></Col></Row>
-      <Row className="done">
-        <Col>
-          <p id="txt-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" fill="#0057D1" />
-              <path d="M3 14.3335V26.3335C3 27.1291 3.31607 27.8922 3.87868 28.4548C4.44129 29.0174 5.20435 29.3335 6 29.3335H30C30.7956 29.3335 31.5587 29.0174 32.1213 28.4548C32.6839 27.8922 33 27.1291 33 26.3335V14.3335L18 20.3335L3 14.3335Z" fill="white" />
-              <path d="M6 7C5.20435 7 4.44129 7.31607 3.87868 7.87868C3.31607 8.44129 3 9.20435 3 10L3 13L18 19L33 13V10C33 9.20435 32.6839 8.44129 32.1213 7.87868C31.5587 7.31607 30.7956 7 30 7H6Z" fill="white" />
-            </svg>
-            General Inquiries
-          </p>
-        </Col>
+        <Row className="done">
+          <Col>
+            <p id="txt-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
+                <rect width="53" height="53" rx="8" fill="#CDB4DB" />
+                <path d="M22.8559 33.234L22.8447 33.2092C22.6188 33.1587 22.3941 33.1032 22.171 33.0427L22.1541 33.0374C20.0194 32.4566 18.048 31.4336 16.3828 30.0424C14.5514 28.5134 13.143 26.5837 12.2805 24.4213C11.418 22.259 11.1274 19.9299 11.4342 17.6369C11.741 15.3439 12.6358 13.1568 14.0406 11.2662C15.4454 9.37564 17.3175 7.83901 19.4938 6.7903C21.67 5.74159 24.0843 5.21266 26.5261 5.24961C28.9679 5.28657 31.363 5.8883 33.5027 7.00233C35.6424 8.11636 37.4617 9.70886 38.8019 11.641C40.1421 13.5731 40.9626 15.7862 41.1917 18.0873C41.2647 18.8188 40.6303 19.4156 39.8537 19.4156C39.0789 19.4156 38.4595 18.8188 38.3697 18.089C38.1223 16.0758 37.3177 14.16 36.0372 12.5354C34.7567 10.9108 33.0457 9.63493 31.0772 8.83679C29.1086 8.03864 26.9524 7.74651 24.8263 7.98991C22.7002 8.23332 20.6798 9.00364 18.9691 10.223C17.2584 11.4424 15.9183 13.0676 15.084 14.9343C14.2497 16.801 13.951 18.8431 14.218 20.8541C14.4849 22.8651 15.3082 24.7738 16.6044 26.3872C17.9006 28.0006 19.624 29.2615 21.6002 30.0424L21.675 30.0725C22.0493 30.2178 22.4336 30.3459 22.8278 30.4569C23.159 29.6994 23.7576 29.0741 24.5215 28.6876C25.2854 28.301 26.1673 28.1773 27.0168 28.3373C27.8664 28.4974 28.631 28.9313 29.1802 29.5653C29.7295 30.1992 30.0294 30.9938 30.0289 31.8136C30.0297 32.6276 29.7343 33.4172 29.1922 34.0493C28.6502 34.6813 27.8946 35.1174 27.0527 35.2842C26.2107 35.4509 25.3338 35.3381 24.5695 34.9647C23.8051 34.5913 23.2 33.9801 22.8559 33.234ZM21.0107 35.4869C17.6862 34.5084 14.7385 32.6276 12.5333 30.0779C11.1667 30.2294 9.90639 30.8506 8.99183 31.8236C8.07726 32.7966 7.5721 34.0536 7.57227 35.3558V36.6222C7.57227 43.2073 15.4508 47.7538 26.2861 47.7538C37.1215 47.7538 45 42.9575 45 36.6222V35.3558C45 33.9466 44.4085 32.5951 43.3557 31.5987C42.3028 30.6022 40.8748 30.0424 39.3858 30.0424H32.5646C33.0061 31.4417 32.9114 32.9435 32.2973 34.2832C31.6832 35.6228 30.5891 36.7143 29.2079 37.3651C27.8266 38.016 26.247 38.1845 24.7474 37.8409C23.2477 37.4972 21.9244 36.6636 21.0107 35.4869ZM35.6431 19.4156C35.6431 16.7377 34.3892 14.3378 32.4037 12.7137C31.4075 11.9003 30.2412 11.2949 28.981 10.937C27.7208 10.5792 26.395 10.4768 25.0902 10.6367C23.7854 10.7967 22.5309 11.2152 21.4086 11.8651C20.2863 12.5149 19.3214 13.3815 18.5769 14.4082C17.8324 15.4349 17.3251 16.5986 17.088 17.8235C16.8509 19.0483 16.8895 20.3067 17.2011 21.5165C17.5127 22.7263 18.0904 23.8603 18.8965 24.8445C19.7025 25.8286 20.7188 26.6408 21.879 27.2281C23.0847 26.19 24.6561 25.6147 26.2861 25.6146C27.9168 25.6143 29.4889 26.1896 30.6951 27.2281C32.1902 26.4722 33.4403 25.3461 34.3117 23.9701C35.1832 22.5941 35.6434 21.0199 35.6431 19.4156Z" fill="white" />
+              </svg>
+              Technical Support
+            </p>
+          </Col>
+        </Row>
+        <Row><p id="need-help">Need assistance? Our support team is ready.</p></Row>
+        <Row><p id="txt-arrow">Get Help
+          <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+            <path d="M15.7071 8.20711C16.0976 7.81658 16.0976 7.18342 15.7071 6.79289L9.34315 0.428932C8.95262 0.0384078 8.31946 0.0384078 7.92893 0.428932C7.53841 0.819457 7.53841 1.45262 7.92893 1.84315L13.5858 7.5L7.92893 13.1569C7.53841 13.5474 7.53841 14.1805 7.92893 14.5711C8.31946 14.9616 8.95262 14.9616 9.34315 14.5711L15.7071 8.20711ZM0 8.5L15 8.5V6.5L0 6.5L0 8.5Z" fill="#765378" />
+          </svg> </p>
+        </Row>
+        <Row className="done">
+          <Col>
+            <p id="txt-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <rect width="44" height="44" rx="8" fill="#CDB4DB" />
+                <path d="M20.167 11H25.667L31.6987 4.95001C31.8691 4.77818 32.0719 4.64179 32.2953 4.54871C32.5187 4.45563 32.7583 4.40771 33.0003 4.40771C33.2424 4.40771 33.482 4.45563 33.7054 4.54871C33.9288 4.64179 34.1316 4.77818 34.302 4.95001L39.032 9.69834C39.3735 10.0418 39.5651 10.5065 39.5651 10.9908C39.5651 11.4752 39.3735 11.9398 39.032 12.2833L34.8337 16.5H20.167V20.1667C20.167 20.6529 19.9738 21.1192 19.63 21.463C19.2862 21.8069 18.8199 22 18.3337 22C17.8474 22 17.3811 21.8069 17.0373 21.463C16.6935 21.1192 16.5003 20.6529 16.5003 20.1667V14.6667C16.5003 13.6942 16.8866 12.7616 17.5743 12.074C18.2619 11.3863 19.1945 11 20.167 11ZM9.167 20.1667V27.5L4.96867 31.6983C4.62721 32.0418 4.43555 32.5065 4.43555 32.9908C4.43555 33.4752 4.62721 33.9398 4.96867 34.2833L9.69867 39.0317C9.8691 39.2035 10.0719 39.3399 10.2953 39.433C10.5187 39.5261 10.7583 39.574 11.0003 39.574C11.2424 39.574 11.482 39.5261 11.7054 39.433C11.9288 39.3399 12.1316 39.2035 12.302 39.0317L20.167 31.1667H27.5003C27.9866 31.1667 28.4529 30.9735 28.7967 30.6297C29.1405 30.2859 29.3337 29.8196 29.3337 29.3333V27.5H31.167C31.6532 27.5 32.1195 27.3069 32.4634 26.963C32.8072 26.6192 33.0003 26.1529 33.0003 25.6667V23.8333H34.8337C35.3199 23.8333 35.7862 23.6402 36.13 23.2964C36.4738 22.9526 36.667 22.4862 36.667 22V20.1667H23.8337V22C23.8337 22.9725 23.4474 23.9051 22.7597 24.5927C22.0721 25.2804 21.1395 25.6667 20.167 25.6667H16.5003C15.5279 25.6667 14.5952 25.2804 13.9076 24.5927C13.22 23.9051 12.8337 22.9725 12.8337 22V16.5L9.167 20.1667Z" fill="#FAF8F8" />
+              </svg>
+              Partnerships
+            </p>
+          </Col>
+        </Row>
+        <Row><p id="need-help">Interested in collaborating? Let's talk.</p></Row>
+        <Row><p id="txt-arrow">Collaborate
+          <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+            <path d="M15.7071 8.20711C16.0976 7.81658 16.0976 7.18342 15.7071 6.79289L9.34315 0.428932C8.95262 0.0384078 8.31946 0.0384078 7.92893 0.428932C7.53841 0.819457 7.53841 1.45262 7.92893 1.84315L13.5858 7.5L7.92893 13.1569C7.53841 13.5474 7.53841 14.1805 7.92893 14.5711C8.31946 14.9616 8.95262 14.9616 9.34315 14.5711L15.7071 8.20711ZM0 8.5L15 8.5V6.5L0 6.5L0 8.5Z" fill="#765378" />
+          </svg>
+        </p>
+        </Row>
       </Row>
-      <Row><p id="need-help">Have questions? We're here to help.</p></Row>
-      <Row><p id="txt-arrow">Contact Us <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
-        <path d="M19.1317 13.0607C19.7175 12.4749 19.7175 11.5251 19.1317 10.9393L9.58574 1.3934C8.99996 0.807611 8.05021 0.807611 7.46442 1.3934C6.87864 1.97919 6.87864 2.92893 7.46442 3.51472L15.9497 12L7.46442 20.4853C6.87864 21.0711 6.87864 22.0208 7.46442 22.6066C8.05021 23.1924 8.99996 23.1924 9.58574 22.6066L19.1317 13.0607ZM0 13.5H18.071V10.5H0V13.5Z" fill="#0057D1" />
-      </svg> </p>
-      </Row>
-
-      <Row className="done">
-        <Col>
-          <p id="txt-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" fill="#0057D1" />
-              <path d="M15.643 22.8883L15.6353 22.8703C15.4801 22.8336 15.3258 22.7934 15.1724 22.7495L15.1609 22.7456C13.6942 22.324 12.3398 21.5814 11.1957 20.5715C9.93751 19.4615 8.96992 18.0607 8.37732 16.491C7.78472 14.9213 7.5851 13.2305 7.79588 11.566C8.00665 9.90144 8.62142 8.31375 9.58657 6.94132C10.5517 5.5689 11.838 4.45341 13.3331 3.69213C14.8283 2.93084 16.487 2.54687 18.1646 2.5737C19.8422 2.60053 21.4877 3.03734 22.9578 3.84604C24.4279 4.65475 25.6778 5.81079 26.5985 7.21338C27.5193 8.61596 28.083 10.2225 28.2404 11.8929C28.2906 12.4239 27.8547 12.8572 27.3211 12.8572C26.7889 12.8572 26.3633 12.4239 26.3016 11.8942C26.1316 10.4327 25.5788 9.04201 24.6991 7.86266C23.8193 6.68331 22.6438 5.75713 21.2913 5.17773C19.9389 4.59833 18.4574 4.38626 16.9968 4.56296C15.5361 4.73966 14.1479 5.29885 12.9726 6.18402C11.7974 7.06919 10.8766 8.24896 10.3034 9.60406C9.73026 10.9592 9.52502 12.4416 9.70843 13.9014C9.89185 15.3613 10.4574 16.7468 11.348 17.918C12.2386 19.0892 13.4226 20.0046 14.7803 20.5715L14.8317 20.5933C15.0889 20.6988 15.3529 20.7918 15.6237 20.8723C15.8513 20.3225 16.2625 19.8685 16.7874 19.5879C17.3122 19.3074 17.9181 19.2175 18.5018 19.3337C19.0854 19.4499 19.6107 19.7649 19.9881 20.2251C20.3654 20.6853 20.5715 21.2621 20.5711 21.8572C20.5717 22.4482 20.3687 23.0213 19.9963 23.4801C19.6239 23.939 19.1048 24.2556 18.5264 24.3766C17.9479 24.4976 17.3454 24.4157 16.8203 24.1447C16.2952 23.8736 15.8794 23.43 15.643 22.8883ZM14.3753 24.5238C12.0913 23.8134 10.0661 22.4481 8.55101 20.5972C7.61207 20.7072 6.74621 21.1581 6.11787 21.8645C5.48953 22.5708 5.14246 23.4833 5.14258 24.4286V25.3479C5.14258 30.1282 10.5554 33.4286 17.9997 33.4286C25.444 33.4286 30.8569 29.9469 30.8569 25.3479V24.4286C30.8569 23.4056 30.4505 22.4246 29.7271 21.7012C29.0038 20.9779 28.0227 20.5715 26.9997 20.5715H22.3133C22.6166 21.5872 22.5515 22.6775 22.1296 23.6499C21.7077 24.6224 20.956 25.4148 20.0071 25.8872C19.0581 26.3597 17.9728 26.482 16.9425 26.2326C15.9122 25.9831 15.0031 25.378 14.3753 24.5238ZM24.4283 12.8572C24.4283 10.9132 23.5669 9.17105 22.2027 7.99205C21.5183 7.40161 20.717 6.96214 19.8512 6.70235C18.9854 6.44256 18.0745 6.36828 17.1781 6.48437C16.2816 6.60045 15.4197 6.90428 14.6486 7.37603C13.8776 7.84779 13.2147 8.47685 12.7032 9.22216C12.1917 9.96747 11.8431 10.8123 11.6803 11.7014C11.5174 12.5906 11.5439 13.5041 11.758 14.3823C11.972 15.2605 12.3689 16.0837 12.9227 16.7981C13.4765 17.5126 14.1748 18.1022 14.9719 18.5285C15.8002 17.7749 16.8799 17.3573 17.9997 17.3572C19.12 17.3569 20.2002 17.7746 21.0289 18.5285C22.056 17.9797 22.9149 17.1623 23.5136 16.1634C24.1123 15.1645 24.4285 14.0218 24.4283 12.8572Z" fill="white" />
-            </svg>
-            Technical Support
-          </p>
-        </Col>
-      </Row>
-      <Row><p id="need-help">Need assistance? Our support team is ready.</p></Row>
-      <Row><p id="txt-arrow">Get Help <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
-        <path d="M19.1317 13.0607C19.7175 12.4749 19.7175 11.5251 19.1317 10.9393L9.58574 1.3934C8.99996 0.807611 8.05021 0.807611 7.46442 1.3934C6.87864 1.97919 6.87864 2.92893 7.46442 3.51472L15.9497 12L7.46442 20.4853C6.87864 21.0711 6.87864 22.0208 7.46442 22.6066C8.05021 23.1924 8.99996 23.1924 9.58574 22.6066L19.1317 13.0607ZM0 13.5H18.071V10.5H0V13.5Z" fill="#0057D1" />
-      </svg> </p>
-      </Row>
-      <Row className="done">
-        <Col>
-          <p id="txt-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" fill="#0057D1" />
-              <path d="M16.5001 9.00002H21.0001L25.9351 4.05002C26.0745 3.90943 26.2404 3.79784 26.4232 3.72168C26.606 3.64553 26.8021 3.60632 27.0001 3.60632C27.1981 3.60632 27.3942 3.64553 27.577 3.72168C27.7597 3.79784 27.9256 3.90943 28.0651 4.05002L31.9351 7.93502C32.2145 8.21606 32.3713 8.59624 32.3713 8.99252C32.3713 9.3888 32.2145 9.76898 31.9351 10.05L28.5001 13.5H16.5001V16.5C16.5001 16.8978 16.3421 17.2794 16.0608 17.5607C15.7795 17.842 15.3979 18 15.0001 18C14.6023 18 14.2207 17.842 13.9394 17.5607C13.6581 17.2794 13.5001 16.8978 13.5001 16.5V12C13.5001 11.2044 13.8162 10.4413 14.3788 9.8787C14.9414 9.31609 15.7044 9.00002 16.5001 9.00002ZM7.5001 16.5V22.5L4.0651 25.935C3.78572 26.2161 3.62891 26.5962 3.62891 26.9925C3.62891 27.3888 3.78572 27.769 4.0651 28.05L7.9351 31.935C8.07454 32.0756 8.24044 32.1872 8.42323 32.2634C8.60602 32.3395 8.80208 32.3787 9.0001 32.3787C9.19811 32.3787 9.39417 32.3395 9.57696 32.2634C9.75975 32.1872 9.92565 32.0756 10.0651 31.935L16.5001 25.5H22.5001C22.8979 25.5 23.2794 25.342 23.5608 25.0607C23.8421 24.7794 24.0001 24.3978 24.0001 24V22.5H25.5001C25.8979 22.5 26.2795 22.342 26.5608 22.0607C26.8421 21.7794 27.0001 21.3978 27.0001 21V19.5H28.5001C28.8979 19.5 29.2795 19.342 29.5608 19.0607C29.8421 18.7794 30.0001 18.3978 30.0001 18V16.5H19.5001V18C19.5001 18.7957 19.184 19.5587 18.6214 20.1213C18.0588 20.684 17.2957 21 16.5001 21H13.5001C12.7044 21 11.9414 20.684 11.3788 20.1213C10.8162 19.5587 10.5001 18.7957 10.5001 18V13.5L7.5001 16.5Z" fill="#FAF8F8" />
-            </svg>
-            Partnerships
-          </p>
-        </Col>
-      </Row>
-      <Row><p id="need-help">Interested in collaborating? Let's talk.</p></Row>
-      <Row><p id="txt-arrow">Collaborate <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
-        <path d="M19.1317 13.0607C19.7175 12.4749 19.7175 11.5251 19.1317 10.9393L9.58574 1.3934C8.99996 0.807611 8.05021 0.807611 7.46442 1.3934C6.87864 1.97919 6.87864 2.92893 7.46442 3.51472L15.9497 12L7.46442 20.4853C6.87864 21.0711 6.87864 22.0208 7.46442 22.6066C8.05021 23.1924 8.99996 23.1924 9.58574 22.6066L19.1317 13.0607ZM0 13.5H18.071V10.5H0V13.5Z" fill="#0057D1" />
-      </svg> </p>
-      </Row>
-
 
     </>
   )
-
 }
-
-export {Home};
+export default Home;

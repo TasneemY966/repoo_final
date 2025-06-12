@@ -1,0 +1,155 @@
+/* UpdateUser.css */
+.update-user-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .update-user-content {
+    background-color: white;
+    border-radius: 8px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+   width: 579px;
+height: 940px;
+    /* max-width: 90%; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image {
+   
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 105.563px;
+    border: 2.345px solid #EEE6F2;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0A033C;
+    font-family: Roboto;
+    font-size: 16.705px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.323px; /* 187.5% */
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 387px;
+height: 52.428px;
+/* flex-shrink: 0; */
+border-radius: 10.441px;
+border: 1.044px solid #DEDDE4;
+background: #FFF;
+    /* overflow: hidden; */
+  }
+  
+  .input-icon {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+  }
+  
+  .input-container input,
+  .input-container select {
+    flex: 1;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .save-button {
+    display: flex;
+    width: 387px;
+    height: 52px;
+    padding: 20.556px 68.52px;
+    justify-content: center;
+    align-items: center;
+    gap: 8.565px;
+    flex-shrink: 0;
+    border-radius: 85.65px;
+    background: #765378;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .cancel-button {
+    background-color: #f1f1f1;
+    color: #333;
+    margin-right: 10px;
+    flex: 1;
+  }
+  
+  .save-button:hover {
+    background-color: #dbb5fa;
+    color: #7d0081;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e1e1e1;
+  }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './verifyEmail.css';
 
 
-const VerifyEmail = () => {
+function VerifyEmail  () {
   const [otp, setOtp] = useState(new Array(6).fill("")); // 6-digit OTP
   const [error, setError] = useState(""); // Error message
   const [loading, setLoading] = useState(false); // Loading state
@@ -75,6 +75,6 @@ const VerifyEmail = () => {
   );
 };
 
-export {VerifyEmail};
+export default VerifyEmail;
 
 

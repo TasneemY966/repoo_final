@@ -1,0 +1,317 @@
+.links_pages {
+  display: flex;
+  width: 742px;
+  height: 79px;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  flex-shrink: 0;
+ }
+
+ .link_home {
+   display: flex;
+   width: 112.799px;
+   height: 51px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   border-bottom: 6px solid #765378;
+ }
+
+ #link_home {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex-shrink: 0;
+   color: #765378;
+   text-align: center;
+   font-family: "Roboto Flex";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 800;
+   line-height: normal;
+   text-decoration: none;
+ }
+
+ .link_learning {
+   display: flex;
+   width: 136px;
+   height: 51px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+ }
+ /* #link_learning::after{
+  border-bottom: 6px solid #765378;
+ } */
+
+ #link_learning {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex-shrink: 0;
+   color: #CDB4DB;
+   text-align: center;
+   font-family: "Roboto Flex";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   text-decoration: none;
+ }
+
+ .link_Leaderboard {
+   display: flex;
+   width: 147px;
+   height: 51px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+ }
+
+ #link_Leaderboard {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex-shrink: 0;
+   color: #CDB4DB;
+   text-align: center;
+   font-family: "Roboto Flex";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   text-decoration: none;
+ }
+ #My-learning-txt{
+  color: #765378;
+font-family: "Roboto Flex";
+font-size: 32px !important;
+font-style: normal;
+font-weight: 700 !important;
+line-height: normal;
+padding: 10px 10px 40px 50px; /*top right bottom left*/
+ }
+ .btns{
+  margin-left: 50px !important;
+
+ }
+ button{
+  margin-right: 22px !important;
+ }
+ button.btn-progress {
+  display: inline-flex;
+  /* margin-right: 22px !important; */
+  width: 151px;
+padding-top: 23px;
+justify-content: center;
+align-items: center;
+gap: 13px;
+border-radius: 100px;
+border: 1px solid #D9C6E3;
+background: #765378;
+ }
+ button.btn-complete{
+  display: flex;
+width: 151px;
+padding: 13px;
+justify-content: center;
+align-items: center;
+padding-top: 23px;
+gap: 12px;
+border-radius: 100px;
+border: 1px solid rgba(0, 0, 0, 0.25);
+background: #FFF;
+ }
+ #btn-progress-txt{
+  color: #FFF;
+text-align: center !important;
+font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+ }
+ #btn-complete-txt{
+  color: #000;
+text-align: center !important;
+font-family: Roboto !important;
+font-size: 21px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: normal;
+text-decoration: none;
+ }
+ button.btn-progress:hover{
+  background: #D9C6E3 !important;
+ }
+ button.btn-complete:hover{
+  background: #765378 !important;
+ }
+ .bordd{
+  border-radius: 22px;
+border: 1px solid #E9EEF7;
+background: #EEE6F2;
+/* width: 1552px; */
+margin: 30px !important;
+height: 292px;
+flex-shrink: 0;
+ }
+ .card_img1{
+  width: 234.2px !important;
+height: 266px !important;
+flex-shrink: 0;
+border-radius: 35.2px !important;
+margin: 13px !important;
+background: url(../../Assets/home_courses/Rectangle\ \(1\).png) lightgray 50% / cover no-repeat;
+ }
+  .card_title1{
+  color: #765378 !important;
+  font-family: "Roboto Flex";
+  font-size: 28.308px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+ }
+ .prog-bar{
+  width: 500.666px;
+height: 0px;
+transform: rotate(0.138deg);
+flex-shrink: 0;
+stroke-width: 6.661px;
+background-color: #CDB4DB !important;
+color: #765378 !important;
+ }
+ input[type="range"] {
+  /* -webkit-appearance: none; */
+  width: 500.666px;
+  height: 8px;
+  background: #CDB4DB;
+  border-radius: 4px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  color: #765378; /* Track color */
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-progress {
+  color: #765378; /* Progress color for Firefox */
+  height: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #CDB4DB; /* Thumb color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+#over-progress{
+  color: #CDB4DB;
+font-family: "Roboto Flex";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.card_img2{
+  width: 234.2px !important;
+  height: 266px !important;
+  flex-shrink: 0;
+  margin: 13px !important;
+  background: url(../../Assets/home_courses/course.png) lightgray 50% / cover no-repeat;
+  border-radius: 35.132px !important;
+box-shadow: 0px 0.836px 3.346px 0px rgba(0, 0, 0, 0.25) !important;
+ }
+ .content-checkbox{
+  margin-top: 22px !important;
+ }
+ #check{
+  width: 24px;
+height: 24px;
+flex-shrink: 0;
+background: #765378 !important;
+ }
+ .txt-checkbox{
+  display: inline;
+width: 514px;
+height: 50px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #939292;
+font-family: "Roboto Flex";
+font-size: 17.99px !important;
+font-style: normal;
+font-weight: 500 !important;
+line-height: normal;
+ }
+#line{
+  margin: 10px;
+  background: #E4ECFA;
+  width: 3px !important;
+height: 252.002px !important;
+}
+.content-next{
+  margin-top: 30px !important;
+}
+#txt-next{
+  display: flex;
+width: 128px;
+height: 31px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #292929;
+font-family: "Roboto Flex";
+font-size: 24px !important;
+font-style: normal;
+font-weight: 500 !important;
+line-height: normal;
+}
+svg{
+  width: 56px;
+  height: 45px;
+}
+#txt-nxt-video{
+  display: inline;
+  text-align: center;
+  padding: 5px;
+  color: #CDB4DB;
+font-family: "Roboto Flex";
+font-size: 24px !important;
+font-style: normal;
+font-weight: 600 !important;
+line-height: normal;
+}
+#time-video{
+  margin-top: 15px ;
+  color: #CDB4DB;
+font-family: "Roboto Flex";
+text-align: center;
+font-size: 20px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: normal;
+}
+button.rate{
+  border-radius: 85.65px;
+/* background: #765378; */
+display: flex;
+width: 195px;
+height: 45.45px;
+padding: 20.556px 68.52px;
+/* justify-content: center !important;
+align-items: center !important; */
+gap: 8.565px;
+flex-shrink: 0;
+}
+.ratee{
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}

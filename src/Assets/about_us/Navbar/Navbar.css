@@ -1,0 +1,96 @@
+#logo-LEARNQUEST {
+  display: flex;
+  /* width: 253px;
+ height: 49.934px; */
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-shrink: 0;
+
+}
+#logo-LEARNQUEST:hover {
+  transform: scale(1.1);
+
+}
+#link-logo{
+  text-decoration: none !important;
+}
+
+#logo-QUEST {
+  color: #765378;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 42.611px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 0px !important;
+  /* 0% */
+  letter-spacing: 0.852px !important;
+}
+
+#logo-EARN {
+  color: #765378;
+  font-family: Roboto;
+  font-size: 36.789px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 0px !important;
+  letter-spacing: 0.736px !important;
+}
+.header {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  background: #FFF;
+}
+
+.search {
+  width: 592.957px;
+  height: 63.285px;
+  flex-shrink: 0;
+}
+
+#text-search {
+  color: #CDB4DB;
+  font-family: "Roboto Flex";
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 300 !important;
+  line-height: normal;
+  display: flex;
+  width: 592.957px;
+  height: 63.285px;
+  /* padding: 15px 504.059px 18.285px 13.897px; */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 28.141px;
+  border: 1.759px solid #EEE6F2;
+}
+
+#icon-search {
+  width: 49.121px;
+  height: 49.121px;
+  flex-shrink: 0;
+  fill: #CDB4DB;
+  stroke-width: 1.17px;
+  stroke: #EEE6F2;
+}
+
+.profile-icons {
+  display: flex;
+  width: 156px;
+  align-items: center;
+  gap: 26px;
+}
+
+#icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+#circle {
+  width: 88px;
+  height: 62px;
+  flex-shrink: 0;
+}

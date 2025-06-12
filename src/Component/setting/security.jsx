@@ -2,7 +2,7 @@ import React from "react";
 import "./Security.css";
 import { Link} from "react-router-dom";
  
-const Security = () => {
+export default function Security ()  {
     return (
         <div className="settings-page2">
           {/* Header */}
@@ -80,7 +80,7 @@ const Security = () => {
           </main>
     
           {/* Footer */}
-          <footer className="settings-footer2">
+          {/* <footer className="settings-footer2">
             <div className="footer-links">
               <a href="#about" id="link">About Us</a>
               <a href="#courses" id="link">Courses</a>
@@ -117,10 +117,10 @@ const Security = () => {
             </svg>
             </div>
             <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-          </footer>
+          </footer> */}
         </div>
       );
     
 };
 
-export {Security};
+

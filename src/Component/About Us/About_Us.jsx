@@ -1,12 +1,12 @@
 import React from "react";
 import { Navbar, NavDropdown, Button, Form, Container, Nav, Row, Col } from 'react-bootstrap';
 import { Link, useNavigate } from "react-router-dom";
-import img from "../Assets/about1.png";
-import img1 from "../Assets/about-innov1.png";
-import img2 from "../Assets/about-innov2.png";
-import img3 from "../Assets/about-innov3.png";
+import img from "../../Assets/about1.png";
+import img1 from "../../Assets/about-innov1.png";
+import img2 from "../../Assets/about-innov2.png";
+import img3 from "../../Assets/about-innov3.png";
 import './about_Us.css';
-const About_Us = () => {
+export default function About_Us ()  {
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary navv">
@@ -24,7 +24,7 @@ const About_Us = () => {
 
           </Nav>
           <img></img>
-          <Button id="but-join" variant="light" size="sm"><Link to="/SignUp" id="link"className="home">Join Us</Link>
+          <Button id="but-join" variant="light" size="sm"><Link to="/sign-up" id="link"className="home">Join Us</Link>
             <svg className="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
               <path d="M25.3782 12.1904C25.9542 11.6144 25.9542 10.6805 25.3782 10.1046L15.9921 0.718388C15.4161 0.142406 14.4822 0.142406 13.9063 0.718388C13.3303 1.29437 13.3303 2.22822 13.9063 2.8042L22.2495 11.1475L13.9063 19.4907C13.3303 20.0667 13.3303 21.0006 13.9063 21.5765C14.4822 22.1525 15.4161 22.1525 15.9921 21.5765L25.3782 12.1904ZM0.62793 12.6224H24.3353V9.67257H0.62793V12.6224Z" fill="black" />
             </svg>
@@ -83,4 +83,4 @@ const About_Us = () => {
     </>
   )
 }
-export  {About_Us};
+

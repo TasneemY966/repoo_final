@@ -6,7 +6,7 @@ import "./styles.css";
 import { Link} from "react-router-dom";
 
 
-const ProfilePage = () => {
+export default function ProfilePage  ()  {
   const userDetails = {
     name: "Alex Johnson",
     email: "Alex.Johnson@gmail.com",
@@ -102,7 +102,7 @@ const ProfilePage = () => {
     </div>
 
       {/* Footer */}
-      <footer className="settings-footer2">
+      {/* <footer className="settings-footer2">
             <div className="footer-links">
               <a href="#about" id="link">About Us</a>
               <a href="#courses" id="link">Courses</a>
@@ -139,9 +139,9 @@ const ProfilePage = () => {
             </svg>
             </div>
             <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-          </footer>
+          </footer> */}
     </div>
   );
 };
 
-export {ProfilePage};
+

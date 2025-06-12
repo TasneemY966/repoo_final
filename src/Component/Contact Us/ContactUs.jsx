@@ -2,7 +2,7 @@ import React from "react";
 import "./ContactUs.css";
 import { Link} from "react-router-dom";
 
-const ContactUs = () => {
+export default function ContactUs () {
     // const navigate = useNavigate();
   return (
     <div className="settings-page3">
@@ -62,7 +62,7 @@ const ContactUs = () => {
       </main>
 
       {/* Footer */}
-      <footer className="settings-footer1">
+      {/* <footer className="settings-footer-con">
         <div className="footer-links">
           <a href="#about" id="link">About Us</a>
           <a href="#courses" id="link">Courses</a>
@@ -99,9 +99,9 @@ const ContactUs = () => {
         </svg>
         </div>
         <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
 
-export {ContactUs};
+

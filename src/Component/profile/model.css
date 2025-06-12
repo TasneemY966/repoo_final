@@ -39,7 +39,7 @@
 
   .profile-img2{
     border-radius: 100.016px;
-    background: url("../Assets/profile.png") lightgray 50% / cover no-repeat;
+    background: url("../../Assets/profile.png") lightgray 50% / cover no-repeat;
     width: 200px;
     height: 200px;
     flex-shrink: 0;

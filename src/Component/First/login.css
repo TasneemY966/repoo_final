@@ -1,175 +1,239 @@
 .parent {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 119px 416px 124px 416px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: #DBCAE5;
+}
+
+/* .left-side { 
+  /* align-self: stretch !important; */
+/*width: 737px !important;
+  height: 1173.698px !important;
+  flex-shrink: 0;
+  background: url(../../Assets/login/login.png) lightgray 50% / cover no-repeat;
+  box-shadow: 9.49px 8.43px 10.54px 0px rgba(0, 0, 0, 0.25);
+ } */
+
+.right-side {
+  display: flex;
+  min-width: 608px;
+  padding: 48px 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+  margin-left: 120px;
+  align-self: stretch;
+  background: #FFF;
+  height: 666px;
+  border-radius: 16px !important;
+}
+
+.head {
+  width: 318px !important;
+  height: 97px !important;
+  flex-shrink: 0;
+}
+
+h2.welcome {
+  color: #000 !important;
+  text-align: left;
+  font-family: "Charis SIL";
+  font-size: 36px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+}
+
+em {
+  color: #CDB4DB !important;
+  font-family: "Charis SIL";
+  font-size: 36px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+
+}
+
+p {
+  color: #000;
+  font-family: "Charis SIL";
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+}
+
+.email {
+  /* margin-top: 66px;
+  margin-bottom: 110px; */
+}
+
+label {
+  width: 150.881px;
+  height: 37.555px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#email ,#password {
+  width: 462px;
+  height: 58.309px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid #9F9595;
+  background: #FAF8F8;
+  box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.password {
+  /* margin-top: 44px;
+  margin-bottom: 119px; */
+}
+
+.f-pass {
+  
+  text-decoration-line: none !important; 
+
+  color: #5D5A6F;
+text-align: right;
+font-family: "Be Vietnam";
+font-size: 16px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: 30px; /* 187.5% */
+
+}
+
+.forget {
+  margin-top: 12px !important;
+  margin-left: 35px !important;
+}
+
+.ico {
+  margin-right: 7px !important;
+}
+
+.btn {
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 21.625px !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: normal;
+}
+
+#login-btn {
+  text-align: center;
+  display: flex;
+width: 470px;
+height: 49px;
+padding: 11.471px 38.236px;
+justify-content: center;
+align-items: center;
+gap: 4.779px;
+flex-shrink: 0;
+  border-radius: 27.795px !important;
+background: #765378;
+}
+
+.SU-div {
+  width: 350px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.SU-sentence {
+  color: #363535;
+  text-align: center !important;
+  font-family: Roboto;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+
+  
+}
+
+.SU {
+  color: #765378 !important;
+  text-decoration-line: none !important;
+font-family: Roboto;
+font-size: 24px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: normal;
+}
+.right-side .styled-hr {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* margin: 20px 0; */
+}
+.styled-hr::before,
+.styled-hr::after {
+    background: #5D5A6F;
+    /* margin: 0 6px; */
+    width: 174px;
+height: 1.596px;
+flex-shrink: 0;
+    
+}
+#Or{
+  color: #5D5A6F;
+text-align: center;
+font-family: "Be Vietnam";
+font-size: 26px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: 30px; /* 187.5% */
+}
+
+.signup-with-google{
+
+color: #5D5A6F !important;
+font-family: "Be Vietnam";
+font-size: 18.412px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: 32.647px; /* 187.5% */
+
+}
+#google{
+  width: 43.529px;
+height: 43.529px;
+flex-shrink: 0;
+  border-radius: 7.618px;
+  background: #CDB4DB !important;
+  padding-left: 0;
+  margin-right: 15px;
+}
+svg{
+  width: 26.118px;
+height: 26.118px;
+flex-shrink: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .parent {
     display: flex;
     width: 100%;
     height: 100vh;
-    /* min-width: 1200px !important;
-    min-height: 720px !important; */
-    justify-content: space-between;
-    align-items: center;
-    background: #FFF;
-  }
-  
-  .left-side {
-    /* align-self: stretch !important; */
-    width: 737px !important;
-    height: 1173.698px !important;
-    flex-shrink: 0;
-    background: url('../Assets/javier-quesada-ZYb_fGvNndA-unsplash 1.png') lightgray 50% / cover no-repeat;
-    box-shadow: 9.49px 8.43px 10.54px 0px rgba(0, 0, 0, 0.25);
-  }
-  
-  .right-side {
-    display: flex;
-    min-width: 656px;
-    padding: 48px 64px;
+    min-width: 360px;
+    max-width: 768px;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 32px;
-    flex: 1 0 0;
-    margin-left: 120px;
-    align-self: stretch;
+    align-items: flex-start;
     background: #FFF;
   }
-  
-  .head {
-    width: 262px;
-    height: 98px;
-    margin-top: 221px;
-    margin-bottom: 66px;
-  }
-  
-  #welcome {
-    font-family: "Charis SIL";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  em {
-    color: #5667D2 !important;
-  
-  }
-  
-  #login {
-    color: #000;
-    font-family: "Charis SIL";
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  
-  /* .email {
-    margin-top: 66px;
-    margin-bottom: 110px;
-  } */
-  
-  label {
-    width: 150.881px;
-    height: 37.555px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-  input {
-    width: 462px;
-    height: 58.309px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    border: 1px solid #9F9595;
-    background: #FAF8F8;
-    box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  
-  /* .password {
-    margin-top: 44px;
-    margin-bottom: 119px;
-  } */
-  
-  .f-pass {
-    align-self: stretch !important;
-  
-    color: var(--BG-Black, #000) !important;
-    text-align: right !important;
-  
-    /* Body/Bold */
-    font-family: 'Bricolage Grotesque', sans-serif !important;
-    font-size: 14px !important;
-    font-style: normal !important;
-    font-weight: 700;
-    line-height: 160%;
-    /* 22.4px */
-    letter-spacing: 0.07px !important;
-    text-decoration-line: underline !important;
-  }
-  
-  .ico {
-    margin-right: 7px !important;
-  }
-  
- 
-  #signIn {
-    display: flex;
-    width: 462px;
-    height: 72px;
-    padding: 17px 0px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border: #FFF;
-    border-radius: 16px !important;
-    background: #0057D1;
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 32px !important;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
-  .SU-div {
-    width: 350px;
-    height: 44px;
-    flex-shrink: 0;
-  }
-  
-  .SU-sentence {
-    color: #363535;
-    text-align: center !important;
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  #forgot {
-    color: #F45050 !important;
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-decoration-line: none !important;
-  }
-  
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    .parent {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      min-width: 360px;
-      max-width: 768px;
-      flex-direction: column;
-      align-items: flex-start;
-      background: #FFF;
-    }
-  }
+}

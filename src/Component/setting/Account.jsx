@@ -3,7 +3,7 @@ import "./Account.css";
 import { Link} from "react-router-dom";
 import { Button} from 'react-bootstrap';
 
-const Account = () => {
+export default function Account  () {
     // const navigate = useNavigate();
   return (
     <div className="settings-page1">
@@ -109,7 +109,7 @@ const Account = () => {
       </main>
 
       {/* Footer */}
-      <footer className="settings-footer1">
+      {/* <footer className="settings-footer1">
         <div className="footer-links">
           <a href="#about" id="link">About Us</a>
           <a href="#courses" id="link">Courses</a>
@@ -146,9 +146,9 @@ const Account = () => {
         </svg>
         </div>
         <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
 
-export {Account};
+

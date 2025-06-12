@@ -1,0 +1,94 @@
+/* ManageSections.css */
+.dashboard-content {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    flex: 1;
+  }
+  
+  .section-title {
+    color: #765378;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  
+  .action-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .create-section-btn {
+   
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+width: 216px;
+height: 46px;
+padding: 20.556px 68.52px;
+justify-content: center;
+align-items: center;
+gap: 8.565px;
+flex-shrink: 0;
+border-radius: 85.65px;
+background: #A68DB2;
+color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  
+  .create-section-btn:hover {
+    background-color: #8a77a0;
+  }
+  
+  .section-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-name {
+    color: #765378;
+font-family: "Roboto Flex";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    margin-bottom: 15px;
+  }
+  
+  .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .course-pill {
+    background-color: #f0e7f5;
+    color: #6d4c7e;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .more-options-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .more-options-btn:hover {
+    color: #333;
+  }

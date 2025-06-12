@@ -1,14 +1,14 @@
 import React from "react";
 // import { Navbar, NavDropdown, Button, Container, Nav, Row, Col } from 'react-bootstrap';
 import { Button, Row, Col } from 'react-bootstrap';
-import image1 from "../Assets/Rectangle (1).png";
-import image2 from "../Assets/sec_img.png";
-import image3 from "../Assets/chatbot.png";
-import circle from "../Assets/img150k.png";
+import image1 from "../../Assets/Rectangle (1).png";
+import image2 from "../../Assets/sec_img.png";
+import image3 from "../../Assets/chatbot.png";
+import circle from "../../Assets/img150k.png";
 import { Link } from "react-router-dom";
 import "./CoursePage.css";
 
-const CoursePage = () => {
+export default function CoursePage () {
   return (
     <>
     
@@ -209,4 +209,4 @@ const CoursePage = () => {
   )
 };
 
-export {CoursePage};
+

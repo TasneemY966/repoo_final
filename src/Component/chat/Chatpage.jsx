@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ChatPage.css";
 // import img from "../Assets/Frame 1.png";
-const ChatPage = () => {
+export default function ChatPage  () {
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hi User name" },
     { sender: "bot", text: "I am a bot designed and trained to help you and answer your questions" },
@@ -66,4 +66,4 @@ const ChatPage = () => {
   );
 };
 
-export {ChatPage};
+

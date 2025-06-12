@@ -3,12 +3,12 @@ import "./SignUp.css";
 import { Row, Col} from "react-bootstrap";
 // import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import google from "../Assets/google_icon.png";
+import google from "../../Assets/google_icon.png";
 
 
 
 
-function SignUps() {
+export default function SignUps() {
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -35,7 +35,8 @@ function SignUps() {
   return (
     <div className="signup-container">
       <div id="signup_title"> 
-      <h2 className="signup-title">LEARNQUEST</h2>
+        <Link to="/home" className="signup-title">
+      <h2 className="signup-title">LEARNQUEST</h2></Link>
       </div>
       <div className="signup-card">
         
@@ -103,4 +104,4 @@ function SignUps() {
  
 }
 
-export { SignUps };
+// export { SignUps };

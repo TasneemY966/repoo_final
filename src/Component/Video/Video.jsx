@@ -1,11 +1,11 @@
 import React ,{useState}from "react";
 import { Button, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import image3 from "../Assets/chatbot.png";
+import image3 from "../../Assets/chatbot.png";
 import { Home, User, Settings } from "lucide-react";
 import "./Video.css";
 import "./Sidebar.css";
-import Menu from "../Assets/menu_icon.png";
+import Menu from "../../Assets/menu_icon.png";
 // import Sidebar from "./Sidebar";
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
 
 
-const Video=()=>{
+export default function Video (){
      const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return(
         <>
@@ -129,4 +129,3 @@ const Video=()=>{
         </>
     );
 }
-export {Video};

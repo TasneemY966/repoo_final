@@ -1,0 +1,192 @@
+/* SectionFormPopup.css */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 622px;
+    height: 354px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group .sec-lab2 {
+    display: block;
+    margin-bottom: 8px;
+    color: #0A033C;
+    font-family: Roboto;
+    font-size: 15.28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.65px; /* 187.5% */
+    width: 176.65px;
+  }
+  
+  .section-name-input {
+   
+    width: 558px;
+height: 41px;
+flex-shrink: 0;
+border-radius: 12px;
+border: 0.955px solid #DEDDE4;
+background: #FFF;
+color: #5D5A6F;
+font-family: "Be Vietnam";
+font-size: 15.28px;
+font-style: normal;
+font-weight: 400;
+line-height: 28.65px; /* 187.5% */
+  }
+  
+  .dropdown-container {
+    position: relative;
+  }
+  
+  .dropdown-header {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    
+  }
+  
+  .dropdown-placeholder {
+    color: #999;
+  }
+  
+  .dropdown-placeholder.has-value {
+    color: #333;
+  }
+  
+  .dropdown-arrow {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .selected-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .course-tag {
+    background-color: #f0e7f5;
+    color: #6d4c7e;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-course-btn {
+    background: none;
+    border: none;
+    color: #6d4c7e;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-group2 {
+    display: flex;
+    justify-content: center; 
+     gap: 20px;
+  }
+  
+  .cancel-btn2, .save-btn2 {
+    /* flex: 1; */
+    /* 
+    border-radius: 20px; */
+    border: none;
+    cursor: pointer;
+    /* font-size: 16px; */
+    text-align: center;
+    width: 558px;
+    height: 41px;
+    flex-shrink: 0;
+    width: 66px;
+    height: 35px;
+    padding: 10px auto;
+   
+  }
+  
+  .cancel-btn2 {
+    background-color: white;
+    color: #ff6b6b;
+    border-radius: 12px;
+    border: 1.171px solid rgba(215, 38, 56, 0.35);
+    color: #D72638;
+    font-family: "Be Vietnam";
+    font-size: 15.28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.65px; /* 187.5% */
+  }
+  
+  .save-btn2 {
+    background-color: white;
+    margin-bottom: 10px;
+    color: #005DD1;
+    font-family: Roboto;
+    font-size: 15.28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40.246px; /* 214.286% */
+    border-radius: 12px;
+    border: 1.171px solid rgba(2, 119, 189, 0.50);
+  }
+  
+  .cancel-btn2:hover {
+    background-color: #e47373;
+  }
+  
+  .save-btn2:hover {
+    background-color: #3a80d2;
+  }

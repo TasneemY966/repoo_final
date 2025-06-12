@@ -1,0 +1,139 @@
+.dashboard-content  {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .notifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .notification-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .notification-content {
+    flex: 1;
+    margin-bottom: 90px;
+  }
+  
+  .notification-content .note-content {
+  
+    margin-bottom: 8px;
+    color: #000;
+    font-family: "Roboto Flex";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .notification-details {
+    color: #000;
+    font-family: "Roboto Flex";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .notification-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .action-btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+  }
+  
+  .review-btn {
+    display: inline-flex;
+padding: 1px 20px 0px 15px;
+align-items: center;
+gap: 10px;
+border-radius: 24px;
+border: 1px solid rgba(2, 119, 189, 0.50);
+color: #005DD1;
+font-family: Roboto;
+font-size: 16.033px;
+font-style: normal;
+font-weight: 500;
+line-height: 34.356px; /* 214.286% */
+background-color: #F5F5F5;
+  }
+  
+  .review-btn:hover {
+    background-color: #7ca5ff;
+  }
+  
+  .accept-btn {
+    background-color: #F5F5F5;
+    display: inline-flex;
+    padding: 1px 20px 0px 15px;
+    align-items: center;
+    gap: 11px;
+    color: #319F43;
+    font-family: Roboto;
+    font-size: 16.033px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.356px; /* 214.286% */
+    border-radius: 24px;
+    border: 1px solid #40A737;
+  }
+  
+  .accept-btn:hover {
+    background-color: #c8e6c9;
+  }
+  
+  .reject-btn {
+    background-color: #F5F5F5;
+    display: inline-flex;
+    padding: 1px 20px 0px 15px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(215, 38, 56, 0.35);
+    color: #D72638;
+    font-family: Roboto;
+    font-size: 16.033px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.356px; /* 214.286% */
+  }
+  
+  .reject-btn:hover {
+    background-color: #ffcdd2;
+  }
+  
+  .icon-review, .icon-accept, .icon-reject {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .notification-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .notification-actions {
+      margin-top: 15px;
+      width: 100%;
+    }
+  }

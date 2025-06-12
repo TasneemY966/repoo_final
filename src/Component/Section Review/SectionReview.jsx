@@ -2,9 +2,9 @@ import React from "react";
 import "./SectionReview.css";
 import { Row, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
-import courseimgg from "../Assets/frame-106.png";
+import courseimgg from "../../Assets/frame-106.png";
 
-const SectionReview=()=>{
+export default function SectionReview () {
     return(
         <Row className="lesson-body2">
                     <Link to="./Section" id="back-btn2">
@@ -45,4 +45,3 @@ const SectionReview=()=>{
                 </Row>
     )
 };
-export {SectionReview}
