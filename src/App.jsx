@@ -125,7 +125,9 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import logo from './logo.svg'; // Imported from App.js, if needed
-
+import { getData } from './Component/api/api';
+import { useEffect, useState } from 'react';
+ // Importing API function to fetch data
 // Component_tasneem from App.jsx 
 import  Login  from './Component/First/login';
 import  Home  from './Component/Home/HomePage';
@@ -167,7 +169,8 @@ import Leaderboard from './Component/Leaderboard/Leaderboard';
 import Track_Courses from './Component/Track_Courses/Track_Courses';
 import Track_Courses2 from './Component/Track_Courses/Track_Courses2';
 import NotFound from './Component/NotFound/NotFound';
-
+import Register from './Component/Register/Register';
+import itemDetails from './Component/ItemDetails/itemDetails';
 const routers = createBrowserRouter([
   {
     path: '/',
@@ -176,7 +179,6 @@ const routers = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'home', element: <Home /> },
       { path: 'about-us', element: <About_Us /> },
-      
       { path: 'home-course', element: <HomeCourses /> },
       { path: 'tracks', element: <Tracks /> },
       { path: 'my-learning', element: <My_learning /> },
@@ -208,6 +210,10 @@ const routers = createBrowserRouter([
   { path: 'publish-track', element: <PublishTrack /> },
   { path: 'quiz-question-page', element: <QuizQuestionPage /> },
 
+  { path: 'Register', element: <Register /> },
+
+  { path: 'itemdetails/:id/:mediaType', element: <itemDetails /> },
+
   { path: 'sign-up', element: <SignUps /> },
   { path: 'login', element: <Login /> },
   { path: 'chat', element: <ChatPage /> },
@@ -221,6 +227,7 @@ const routers = createBrowserRouter([
 
 function App() {
   return <RouterProvider router={routers} />;
+  
 }
 
 export default App;

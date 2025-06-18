@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { Row, Col} from "react-bootstrap";
-// import axios from "axios";
+import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import google from "../../Assets/google_icon.png";
 
@@ -18,7 +18,7 @@ export default function SignUps() {
     confirmpassword: "",
     agree: false,
   });
-
+  const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
@@ -30,8 +30,40 @@ export default function SignUps() {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
+//   function setUser(e) {
+//     e.preventDefault();
+//     const { fname, lname, email, password, agree } = formData;
+//     const newErrors = {};
+    
+//     if (!fname) newErrors.fname = "First name is required";
+//     if (!lname) newErrors.lname = "Last name is required";
+//     if (!email) newErrors.email = "Email is required";
+//     if (!password) newErrors.password = "Password is required";
+//     if (!agree) newErrors.agree = "You must agree to the terms and conditions";
 
- 
+//     setErrors(newErrors);
+
+//     if (Object.keys(newErrors).length === 0) {
+//       setMessage("Registration successful!");
+//       senRegisterDataApi();
+//     } else {
+//       setMessage("");
+//     }
+//   }
+//   function userData(e){
+//     const myUser = [...formData];
+//     myUser[e.target.name ]= e.target.value;
+//     setFormData(myUser);
+//   }
+//   async function senRegisterDataApi() {
+//     let {data} = await axios.post("http://localhost:5268/api/signup", user);
+    
+//   }
+//  function SubmitFinalUser(){
+//   e.preventDefault();
+//   senRegisterDataApi();
+//   isLoading(true);
+//  }
   return (
     <div className="signup-container">
       <div id="signup_title"> 
@@ -40,7 +72,7 @@ export default function SignUps() {
       </div>
       <div className="signup-card">
         
-        <form >
+        <form  >
           <Col id="signup-form">
           <Row>   
            <Col>
@@ -74,7 +106,9 @@ export default function SignUps() {
               I agree to the <span className="terms">Terms & Conditions</span>
             </span>
             </div>
-          <button type="submit" className="signup-button" >Sign Up</button>
+          <button type="submit" className="signup-button" >
+            {isLoading ==true ? <i className="fas fa-spin"></i>:'Sign Up'}
+            Sign Up</button>
           </Col>
           </form>
           {message && <p style={{ color: "green" }}>{message}</p>}
