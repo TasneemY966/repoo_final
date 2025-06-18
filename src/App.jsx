@@ -170,7 +170,7 @@ import Track_Courses from './Component/Track_Courses/Track_Courses';
 import Track_Courses2 from './Component/Track_Courses/Track_Courses2';
 import NotFound from './Component/NotFound/NotFound';
 import Register from './Component/Register/Register';
-import itemDetails from './Component/ItemDetails/itemDetails';
+// import itemDetails from './Component/ItemDetails/itemDetails';
 const routers = createBrowserRouter([
   {
     path: '/',
@@ -191,7 +191,7 @@ const routers = createBrowserRouter([
       { path: 'course-page', element: <CoursePage /> },
       { path: 'course', element: <Course /> },
       { path: 'video', element: <Video /> },
-      { path: 'contact-us', element: <ContactUs /> },
+      // { path: 'contact-us', element: <ContactUs /> }, تم الحذف
       { path: 'account', element: <Account /> },
       { path: 'profile', element: <ProfilePage /> },
       { path: 'security', element: <Security /> },

@@ -131,7 +131,7 @@ const HomeCourses = () => {
   const [skilcourse, setSkillcourse] = useState([]);
 
   const getstartedcourse = () => {
-    axios.get('http://localhost:7217')
+    axios.get(api_url)
       .then((response) => setProducts(response.data));
   };
 
