@@ -98,7 +98,14 @@ export default function SignUps() {
           <label>Password</label>
           <input name="password" id="input_field" type="password" value={formData.password} onChange={handleChange} required />
          
-          {errors.password && (  <small className="error">{errors.password}</small> )} </Col>
+          {errors.password && (  <small className="error">{errors.password}</small> )} 
+          </Col>
+           <Col>
+          <label>Confirm Password</label>
+          <input name="confirmpassword" id="input_field" type="password" value={formData.confirmpassword} onChange={handleChange} required />
+         
+          {errors.password && (  <small className="error">{errors.confirmpassword}</small> )} 
+          </Col>
           </Row>
           <div id="agree_button">
            <input type="checkbox" id="agree" name="agree"  checked={formData.agree} onChange={handleChange}/>
@@ -107,7 +114,7 @@ export default function SignUps() {
             </span>
             </div>
           <button type="submit" className="signup-button" >
-            {isLoading ==true ? <i className="fas fa-spin"></i>:'Sign Up'}
+            {/* {isLoading ==true ? <i className="fas fa-spin"></i>:'Sign Up'} */}
             Sign Up</button>
           </Col>
           </form>

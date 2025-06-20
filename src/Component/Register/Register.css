@@ -1,4 +1,4 @@
-
+/* 
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -151,13 +151,7 @@
 }
 
 .signup-google {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px; */
+
   cursor: pointer;
   width: 370px;
   height: 54.41px;
@@ -185,4 +179,4 @@
 }
 .signup-google:hover {
   background-color: #9a48a1;
-}
+} */

@@ -1,90 +1,131 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Account.css";
-import { Link} from "react-router-dom";
-import { Button} from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
+import axios from "axios";
 
-export default function Account  () {
-    // const navigate = useNavigate();
+export default function Account() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [location, setLocation] = useState("");
+  const api_url = "https://fakestoreapi.com/products"; // Example API, adjust as needed
+
+  useEffect(() => {
+    // Simulate fetching user data (replace with actual API call)
+    axios.get(api_url)
+      .then((response) => {
+        const userData = response.data[0] || {};
+        setFirstName(userData.title.split(" ")[0] || "Alex"); // Example mapping
+        setLastName(userData.title.split(" ")[1] || "Johnson"); // Example mapping
+        setEmail(userData.email || "alex.johnson@example.com");
+        setLocation(userData.location || ""); // Adjust based on API
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    // Add logic to save changes (e.g., API call)
+    console.log("Saved:", { firstName, lastName, email, location });
+  };
+
+  const handleDelete = () => {
+    // Add logic to delete account (e.g., API call with confirmation)
+    console.log("Account deleted");
+  };
+
   return (
     <div className="settings-page1">
       {/* Header */}
       <header className="settings-header">
-      <div id="signup_title"> 
-      <Link to="/home" className="signup-title">
-      <h2 className="signup-title">LEARNQUEST</h2>
-      </Link>
-      </div>
+        <div id="signup_title">
+          <Link to="/home" className="signup-title">
+            <h2 className="signup-title">LEARNQUEST</h2>
+          </Link>
+        </div>
         <div className="settings-search">
-
           <input type="text" placeholder="Search" id="search"/>
-          
           <button id="search-buttom">
-            
-          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
-  <rect x="1.55157" y="0.666923" width="47.9511" height="47.9511" rx="23.9756" fill="#CDB4DB"/>
-  <rect x="1.55157" y="0.666923" width="47.9511" height="47.9511" rx="23.9756" stroke="#EEE6F2" stroke-width="1.16954"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M32.8111 29.9043C34.6343 27.5528 35.4935 24.5948 35.214 21.6321C34.9345 18.6693 33.5373 15.9244 31.3065 13.9557C29.0758 11.987 26.1791 10.9424 23.2058 11.0344C20.2325 11.1265 17.4059 12.3482 15.3011 14.4511C13.1945 16.5555 11.9692 19.3843 11.875 22.3611C11.7808 25.3378 12.8247 28.2385 14.7941 30.472C16.7635 32.7054 19.51 34.1036 22.4741 34.3816C25.4381 34.6596 28.3966 33.7965 30.7466 31.9681L30.8095 32.0339L37.0117 38.24C37.1475 38.3759 37.3088 38.4837 37.4863 38.5573C37.6638 38.6308 37.854 38.6687 38.0461 38.6687C38.2382 38.6687 38.4284 38.6308 38.6059 38.5573C38.7834 38.4837 38.9447 38.3759 39.0805 38.24C39.2164 38.1041 39.3241 37.9428 39.3976 37.7652C39.4712 37.5877 39.509 37.3974 39.509 37.2052C39.509 37.013 39.4712 36.8227 39.3976 36.6451C39.3241 36.4676 39.2164 36.3062 39.0805 36.1703L32.8769 29.9657L32.8111 29.9043ZM29.7758 16.5208C30.6013 17.3333 31.2578 18.3013 31.7075 19.3688C32.1572 20.4364 32.3911 21.5825 32.3959 22.741C32.4006 23.8995 32.176 25.0475 31.735 26.1187C31.294 27.1899 30.6454 28.1631 29.8265 28.9823C29.0077 29.8015 28.0348 30.4504 26.964 30.8916C25.8932 31.3327 24.7457 31.5574 23.5877 31.5527C22.4297 31.548 21.284 31.3139 20.2169 30.8641C19.1497 30.4142 18.1821 29.7574 17.37 28.9316C15.7469 27.2812 14.8415 25.0562 14.8509 22.741C14.8604 20.4259 15.7839 18.2082 17.4203 16.5712C19.0567 14.9341 21.2735 14.0102 23.5877 14.0008C25.9019 13.9914 28.1261 14.8971 29.7758 16.5208Z" fill="white"/>
-</svg>
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
+              <rect x="1.55157" y="0.666923" width="47.9511" height="47.9511" rx="23.9756" fill="#CDB4DB"/>
+              <rect x="1.55157" y="0.666923" width="47.9511" height="47.9511" rx="23.9756" stroke="#EEE6F2" stroke-width="1.16954"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M32.8111 29.9043C34.6343 27.5528 35.4935 24.5948 35.214 21.6321C34.9345 18.6693 33.5373 15.9244 31.3065 13.9557C29.0758 11.987 26.1791 10.9424 23.2058 11.0344C20.2325 11.1265 17.4059 12.3482 15.3011 14.4511C13.1945 16.5555 11.9692 19.3843 11.875 22.3611C11.7808 25.3378 12.8247 28.2385 14.7941 30.472C16.7635 32.7054 19.51 34.1036 22.4741 34.3816C25.4381 34.6596 28.3966 33.7965 30.7466 31.9681L30.8095 32.0339L37.0117 38.24C37.1475 38.3759 37.3088 38.4837 37.4863 38.5573C37.6638 38.6308 37.854 38.6687 38.0461 38.6687C38.2382 38.6687 38.4284 38.6308 38.6059 38.5573C38.7834 38.4837 38.9447 38.3759 39.0805 38.24C39.2164 38.1041 39.3241 37.9428 39.3976 37.7652C39.4712 37.5877 39.509 37.3974 39.509 37.2052C39.509 37.013 39.4712 36.8227 39.3976 36.6451C39.3241 36.4676 39.2164 36.3062 39.0805 36.1703L32.8769 29.9657L32.8111 29.9043ZM29.7758 16.5208C30.6013 17.3333 31.2578 18.3013 31.7075 19.3688C32.1572 20.4364 32.3911 21.5825 32.3959 22.741C32.4006 23.8995 32.176 25.0475 31.735 26.1187C31.294 27.1899 30.6454 28.1631 29.8265 28.9823C29.0077 29.8015 28.0348 30.4504 26.964 30.8916C25.8932 31.3327 24.7457 31.5574 23.5877 31.5527C22.4297 31.548 21.284 31.3139 20.2169 30.8641C19.1497 30.4142 18.1821 29.7574 17.37 28.9316C15.7469 27.2812 14.8415 25.0562 14.8509 22.741C14.8604 20.4259 15.7839 18.2082 17.4203 16.5712C19.0567 14.9341 21.2735 14.0102 23.5877 14.0008C25.9019 13.9914 28.1261 14.8971 29.7758 16.5208Z" fill="white"/>
+            </svg>
           </button>
         </div>
         <div className="settings-icons">
           <i id="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
-            <g clip-path="url(#clip0_79_211)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
+              <g clip-path="url(#clip0_79_211)">
                 <path d="M37.9284 33.3897C36.8033 32.3868 35.8184 31.237 35 29.9714C34.1057 28.2247 33.5702 26.3166 33.425 24.3597V18.5964C33.4327 15.5229 32.3179 12.5524 30.2899 10.243C28.2619 7.93357 25.4604 6.44419 22.4117 6.05469V4.54969C22.4117 4.13661 22.2476 3.74046 21.9555 3.44837C21.6634 3.15628 21.2673 2.99219 20.8542 2.99219C20.4411 2.99219 20.045 3.15628 19.7529 3.44837C19.4608 3.74046 19.2967 4.13661 19.2967 4.54969V6.07802C16.2753 6.4956 13.5077 7.99399 11.5063 10.2956C9.50495 12.5973 8.40554 15.5463 8.41168 18.5964V24.3597C8.2665 26.3166 7.73097 28.2247 6.83668 29.9714C6.03271 31.2341 5.06358 32.3837 3.95502 33.3897C3.83057 33.499 3.73083 33.6336 3.66244 33.7845C3.59404 33.9353 3.55856 34.099 3.55835 34.2647V35.8514C3.55835 36.1608 3.68127 36.4575 3.90006 36.6763C4.11885 36.8951 4.4156 37.018 4.72502 37.018H37.1584C37.4678 37.018 37.7645 36.8951 37.9833 36.6763C38.2021 36.4575 38.325 36.1608 38.325 35.8514V34.2647C38.3248 34.099 38.2893 33.9353 38.2209 33.7845C38.1525 33.6336 38.0528 33.499 37.9284 33.3897ZM5.98502 34.6847C7.07025 33.6359 8.02594 32.4608 8.83168 31.1847C9.95844 29.0753 10.6151 26.747 10.7567 24.3597V18.5964C10.7104 17.2291 10.9398 15.8664 11.4311 14.5896C11.9224 13.3128 12.6656 12.1479 13.6165 11.1643C14.5673 10.1807 15.7064 9.39855 16.9659 8.86434C18.2254 8.33013 19.5794 8.05483 20.9475 8.05483C22.3156 8.05483 23.6697 8.33013 24.9291 8.86434C26.1886 9.39855 27.3277 10.1807 28.2786 11.1643C29.2294 12.1479 29.9727 13.3128 30.464 14.5896C30.9553 15.8664 31.1846 17.2291 31.1384 18.5964V24.3597C31.2799 26.747 31.9366 29.0753 33.0634 31.1847C33.8691 32.4608 34.8248 33.6359 35.91 34.6847H5.98502Z" fill="#939292"/>
                 <path d="M21 40.9148C21.7349 40.8978 22.4401 40.6215 22.991 40.1347C23.5418 39.648 23.9028 38.982 24.01 38.2548H17.8733C17.9835 39.0018 18.3613 39.6834 18.9365 40.1727C19.5116 40.662 20.2449 40.9257 21 40.9148Z" fill="#939292"/>
-            </g>
-            <defs>
+              </g>
+              <defs>
                 <clipPath id="clip0_79_211">
-                <rect width="42" height="42" fill="white" transform="translate(0 0.921387)"/>
+                  <rect width="42" height="42" fill="white" transform="translate(0 0.921387)"/>
                 </clipPath>
-            </defs>
+              </defs>
             </svg>
           </i>
           <i id="circle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="88" height="63" viewBox="0 0 88 63" fill="none">
-            <circle cx="31" cy="31.9214" r="31" fill="#D9D9D9"/>
-            <path d="M86.2837 31.9214L88 33.6393L78.6463 42.9962C78.4965 43.1471 78.3182 43.2668 78.1219 43.3484C77.9256 43.4301 77.7151 43.4722 77.5024 43.4722C77.2898 43.4722 77.0793 43.4301 76.8829 43.3484C76.6866 43.2668 76.5084 43.1471 76.3585 42.9962L67 33.6393L68.7163 31.9231L77.5 40.7052L86.2837 31.9214Z" fill="#939292"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="88" height="63" viewBox="0 0 88 63" fill="none">
+              <circle cx="31" cy="31.9214" r="31" fill="#D9D9D9"/>
+              <path d="M86.2837 31.9214L88 33.6393L78.6463 42.9962C78.4965 43.1471 78.3182 43.2668 78.1219 43.3484C77.9256 43.4301 77.7151 43.4722 77.5024 43.4722C77.2898 43.4722 77.0793 43.4301 76.8829 43.3484C76.6866 43.2668 76.5084 43.1471 76.3585 42.9962L67 33.6393L68.7163 31.9231L77.5 40.7052L86.2837 31.9214Z" fill="#939292"/>
             </svg>
           </i>
         </div>
       </header>
-      
 
       {/* Navigation Tabs */}
       <nav className="settings-tabs">
-      <Link to="/account"  id="active"> 
-      <Button className="active" id="active">Account</Button>
-      </Link>
-
-      <Link to="/security" id="active"Button>
-      <Button className="active" id="active">Security</Button>
-      </Link>
+        <Link to="/account" id="active">
+          <Button className="active" id="active">Account</Button>
+        </Link>
+        <Link to="/security" id="active">
+          <Button className="active" id="active">Security</Button>
+        </Link>
       </nav>
-       
+
       {/* Account Section */}
       <main className="settings-content">
-        <form className="account-form">
-       
+        <form className="account-form" onSubmit={handleSave}>
           <div className="form-row">
-            <label >
+            <label>
               First name
-              <input type="text" placeholder="Alex" />
+              <input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="Alex"
+              />
             </label>
-            <label >
+            <label>
               Last name
-              <input type="text" placeholder="Johnson" />
+              <input
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Johnson"
+              />
             </label>
           </div>
           <div className="form-row">
             <label>
               E-mail
-              <input type="email" placeholder="Alex.Johnson@gmail.com" />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="alex.johnson@example.com"
+              />
             </label>
             <label>
               Location
-              <select>
+              <select
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              >
                 <option value="">Select Location</option>
                 <option value="us">United States</option>
                 <option value="uk">United Kingdom</option>
@@ -93,7 +134,7 @@ export default function Account  () {
             </label>
           </div>
           <button type="submit" className="save-button">Save</button>
-        <hr/>
+          <hr/>
         </form>
 
         <div className="delete-account">
@@ -104,51 +145,11 @@ export default function Account  () {
             anonymized, and any certificates earned will be deleted. This action
             cannot be undone!
           </p>
-          <button className="delete-button">Delete Account</button>
+          <button className="delete-button" onClick={handleDelete}>Delete Account</button>
         </div>
       </main>
 
-      {/* Footer */}
-      {/* <footer className="settings-footer1">
-        <div className="footer-links">
-          <a href="#about" id="link">About Us</a>
-          <a href="#courses" id="link">Courses</a>
-          <a href="#contact" id="link">Contact</a>
-          <a href="#review" id="link"> Review</a>
-        </div>
-        <div className="social-icons">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <path d="M14.9207 2.48682C13.2878 2.48682 11.671 2.80843 10.1624 3.43329C8.6539 4.05815 7.2832 4.97402 6.12861 6.12861C3.79681 8.46041 2.48682 11.623 2.48682 14.9207C2.48682 20.4164 6.05534 25.0791 10.9916 26.7328C11.6133 26.8323 11.8122 26.4469 11.8122 26.1112V24.0098C8.36803 24.7559 7.63444 22.3437 7.63444 22.3437C7.06248 20.9014 6.25428 20.5159 6.25428 20.5159C5.1228 19.745 6.34131 19.7699 6.34131 19.7699C7.5847 19.8569 8.24369 21.0506 8.24369 21.0506C9.32544 22.9405 11.1532 22.381 11.8619 22.0826C11.9739 21.2744 12.2971 20.7273 12.6453 20.4164C9.88496 20.1056 6.98787 19.0363 6.98787 14.299C6.98787 12.9188 7.46036 11.8122 8.26856 10.9294C8.14422 10.6186 7.70904 9.32544 8.3929 7.64687C8.3929 7.64687 9.43735 7.31116 11.8122 8.91512C12.7945 8.64158 13.8638 8.50481 14.9207 8.50481C15.9776 8.50481 17.0469 8.64158 18.0291 8.91512C20.404 7.31116 21.4485 7.64687 21.4485 7.64687C22.1323 9.32544 21.6971 10.6186 21.5728 10.9294C22.381 11.8122 22.8535 12.9188 22.8535 14.299C22.8535 19.0487 19.944 20.0932 17.1712 20.404C17.6188 20.7895 18.0291 21.5479 18.0291 22.7043V26.1112C18.0291 26.4469 18.2281 26.8448 18.8622 26.7328C23.7985 25.0667 27.3545 20.4164 27.3545 14.9207C27.3545 13.2878 27.0329 11.671 26.4081 10.1624C25.7832 8.6539 24.8673 7.2832 23.7127 6.12861C22.5582 4.97402 21.1875 4.05815 19.6789 3.43329C18.1704 2.80843 16.5535 2.48682 14.9207 2.48682Z" fill="white"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
-        <path d="M28.2276 14.9207C28.2276 8.05719 22.6572 2.48682 15.7937 2.48682C8.93023 2.48682 3.35986 8.05719 3.35986 14.9207C3.35986 20.9387 7.63711 25.9495 13.307 27.1059V18.6508H10.8202V14.9207H13.307V11.8122C13.307 9.41248 15.2591 7.46036 17.6588 7.46036H20.7673V11.1905H18.2805C17.5966 11.1905 17.0371 11.75 17.0371 12.4339V14.9207H20.7673V18.6508H17.0371V27.2924C23.3162 26.6707 28.2276 21.3739 28.2276 14.9207Z" fill="white"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <g clip-path="url(#clip0_80_300)">
-            <mask id="mask0_80_300"  maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
-            <path d="M0.436768 0.920654H27.4368V27.9207H0.436768V0.920654Z" fill="white"/>
-            </mask>
-            <g mask="url(#mask0_80_300)">
-            <path d="M21.6993 2.18591H25.8399L16.7949 12.5501L27.4368 26.6556H19.1053L12.5752 18.1024L5.11162 26.6556H0.967125L10.6408 15.5663L0.436768 2.18784H8.98034L14.8741 10.0043L21.6993 2.18591ZM20.2432 24.1716H22.5382L7.72677 4.5407H5.26591L20.2432 24.1716Z" fill="white"/>
-            </g>
-        </g>
-        <defs>
-            <clipPath id="clip0_80_300">
-            <rect width="27" height="27" fill="white" transform="translate(0.436768 0.920654)"/>
-            </clipPath>
-        </defs>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-        <path d="M9.85715 2.48682H20.3016C24.2804 2.48682 27.5132 5.71962 27.5132 9.69846V20.1429C27.5132 22.0555 26.7534 23.8899 25.401 25.2423C24.0485 26.5947 22.2142 27.3545 20.3016 27.3545H9.85715C5.87831 27.3545 2.64551 24.1217 2.64551 20.1429V9.69846C2.64551 7.78581 3.4053 5.9515 4.75775 4.59906C6.11019 3.24661 7.9445 2.48682 9.85715 2.48682ZM9.60847 4.97359C8.42131 4.97359 7.28277 5.44519 6.44333 6.28464C5.60388 7.12408 5.13228 8.26262 5.13228 9.44978V20.3916C5.13228 22.8659 7.13413 24.8678 9.60847 24.8678H20.5503C21.7374 24.8678 22.876 24.3962 23.7154 23.5567C24.5549 22.7173 25.0265 21.5787 25.0265 20.3916V9.44978C25.0265 6.97544 23.0246 4.97359 20.5503 4.97359H9.60847ZM21.6071 6.83867C22.0194 6.83867 22.4147 7.00242 22.7062 7.29389C22.9976 7.58537 23.1614 7.98069 23.1614 8.3929C23.1614 8.80511 22.9976 9.20043 22.7062 9.49191C22.4147 9.78338 22.0194 9.94713 21.6071 9.94713C21.1949 9.94713 20.7996 9.78338 20.5081 9.49191C20.2167 9.20043 20.0529 8.80511 20.0529 8.3929C20.0529 7.98069 20.2167 7.58537 20.5081 7.29389C20.7996 7.00242 21.1949 6.83867 21.6071 6.83867ZM15.0794 8.70375C16.7282 8.70375 18.3095 9.35874 19.4754 10.5246C20.6413 11.6905 21.2963 13.2718 21.2963 14.9207C21.2963 16.5695 20.6413 18.1508 19.4754 19.3167C18.3095 20.4826 16.7282 21.1376 15.0794 21.1376C13.4305 21.1376 11.8492 20.4826 10.6833 19.3167C9.51744 18.1508 8.86244 16.5695 8.86244 14.9207C8.86244 13.2718 9.51744 11.6905 10.6833 10.5246C11.8492 9.35874 13.4305 8.70375 15.0794 8.70375ZM15.0794 11.1905C14.0901 11.1905 13.1413 11.5835 12.4417 12.2831C11.7422 12.9826 11.3492 13.9314 11.3492 14.9207C11.3492 15.91 11.7422 16.8588 12.4417 17.5583C13.1413 18.2578 14.0901 18.6508 15.0794 18.6508C16.0687 18.6508 17.0175 18.2578 17.717 17.5583C18.4165 16.8588 18.8095 15.91 18.8095 14.9207C18.8095 13.9314 18.4165 12.9826 17.717 12.2831C17.0175 11.5835 16.0687 11.1905 15.0794 11.1905Z" fill="white"/>
-        </svg>
-        </div>
-        <p id="copy">&copy; 2024 Top Programming, Empowering Future Coders</p>
-      </footer> */}
+   
     </div>
   );
-};
-
-
+}

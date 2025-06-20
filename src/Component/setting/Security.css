@@ -52,9 +52,7 @@
 
     outline: none;
     display: flex;
-    /* width: 300px;
-    height: 63.285px; */
-    /* padding: 15px 504.06px 18.285px 13.896px; */
+  
     align-items: center;
     flex-shrink: 0;
     border-radius: 28.141px;
@@ -97,46 +95,10 @@
     gap: 50px;
     flex-shrink: 0;
   }
-/*   
-  .settings-tabs #active {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    border-bottom: 2px solid transparent;
-    
-
-  } */
-  /* .settings-tabs #security {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-
-    border-bottom: 2px solid transparent;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-   
-  } */
-  
-  /* .settings-tabs button.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-  } */
 
   
   .settings-tabs2 #active2 {
-    /* padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #765378;
-    border-bottom: 2px solid #765378; */
-
+  
     display: flex;
     width: 119px;
     height: 49px;
@@ -169,15 +131,17 @@
   }
  /* Security Form */
  .security-content {
-    flex: 1;
-    padding: 20px 40px;
+
     width: 772px;
     height: 419px;
     flex-shrink: 0;
-    border: 1px solid #E4ECFA;
+    border: 1px solid #CDB4DB;
     background: #FFF;
+    padding: 20px 40px;
     margin: 0 auto;
-    /* text-align: center; */
+    flex: 1px;
+
+
   }
   
   .security-form {
@@ -222,79 +186,18 @@
   }
   
   .change-password-button {
-    width: 100%;
-    padding: 10px;
-   
-    
-    
-    cursor: pointer;
-
-    
-    
-    color: #fff;
-    border: 1px solid #0257CD;
-    background: #FFF;
-    cursor: pointer;
     display: flex;
-    width: 393px;
-    height: 41px;
+    width: 370px;
+    height: 49px;
+    padding: 11.471px 38.236px;
     justify-content: center;
     align-items: center;
+    gap: 4.779px;
     flex-shrink: 0;
-    margin-top: 10px;
-    /* margin-left: 25px; */
-
-    /*delete*/
-    color: #765378;
-    text-align: center;
-    font-family: "Roboto Flex";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    border-radius: 10px;
+    border: 1px solid #D9C6E3;
+    background: #FFF;
   }
   
   
-  /* Footer */
-  .settings-footer2 {
-    background-color: #765378;
-    color: #FFFFFF;
-    text-align: center;
-    width: 1440px;
-    height: 250px;
-    flex-shrink: 0;
-    padding-top: 50px;
-    padding-bottom: 10px
-  }
   
-  .footer-links #link {
-    color: #FFF;
-    margin: 0px 50px;
-    text-decoration: none;
-  }
-  .social-icons {
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 50px;
-    margin-left: 15px;
-    padding-right: 30px;
-    /* float: left; */
-    display: flex;
-    gap: 10px;
-  }
- 
-  .social-icons i:hover {
-    color: #007bff;
-  }
-  .settings-footer2 #copy{
-    color: #939292;
-    font-family: "Roboto Flex";
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    /* margin-bottom: 30px; */
-    margin-right: 40px;
-    text-align: end;
-    /* padding-bottom: 40px; */
-  }
