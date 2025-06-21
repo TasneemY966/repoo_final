@@ -69,10 +69,6 @@ p {
   line-height: normal;
 }
 
-.email {
-  /* margin-top: 66px;
-  margin-bottom: 110px; */
-}
 
 label {
   width: 150.881px;
@@ -96,10 +92,6 @@ label {
   box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.password {
-  /* margin-top: 44px;
-  margin-bottom: 119px; */
-}
 
 .f-pass {
   
@@ -219,10 +211,13 @@ flex-shrink: 0;
   padding-left: 0;
   margin-right: 15px;
 }
-svg{
+#eye-icon10{
   width: 26.118px;
-height: 26.118px;
-flex-shrink: 0;
+  height: 26.118px;
+  flex-shrink: 0;
+  position: relative;
+  top: 1000px;
+  left: 1060px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
