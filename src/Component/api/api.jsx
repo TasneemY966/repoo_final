@@ -16,4 +16,4 @@ export const getData = async () => {
 };
 
 // Add more functions for other endpoints (POST, PUT, DELETE, etc.) as needed
-export default api;
+export default api;// Export the axios instance for use in other parts of the application
