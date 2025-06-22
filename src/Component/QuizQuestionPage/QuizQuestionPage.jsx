@@ -1,52 +1,90 @@
-// QuizQuestionPage.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Plus, Star, Trash2, Play } from 'lucide-react';
 import './QuizQuestionPage.css';
+import { useNavigate, useLocation } from 'react-router-dom';
 
- function QuizQuestionPage  ()  {
+function QuizQuestionPage() {
   const [question, setQuestion] = useState('');
   const [options, setOptions] = useState([{ text: 'Option 1', id: 1 }]);
   const [newOption, setNewOption] = useState('');
   const [questionType, setQuestionType] = useState('Multiple Choice');
   const [timeToAppear, setTimeToAppear] = useState('');
-  
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const [role, setRole] = useState(localStorage.getItem("role") || "");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const videoName = searchParams.get("video");
+
+  useEffect(() => {
+    const userRole = localStorage.getItem("role") || "";
+    setRole(userRole);
+  }, []);
+
   const addOption = () => {
-    if (newOption.trim() !== '') {
+    if (newOption.trim() !== '' && (role === "Admin" || role === "Instructor")) {
       setOptions([...options, { text: newOption, id: Date.now() }]);
       setNewOption('');
-    } else {
-      // Add empty option
+    } else if (role === "Admin" || role === "Instructor") {
       setOptions([...options, { text: `Option ${options.length + 1}`, id: Date.now() }]);
     }
   };
 
   const removeOption = (id) => {
-    setOptions(options.filter(option => option.id !== id));
+    if (role === "Admin" || role === "Instructor") {
+      setOptions(options.filter(option => option.id !== id));
+    }
   };
 
   const handleClose = () => {
-    // Close modal or navigate back
-    console.log('Close quiz question editor');
+    if (role === "Admin" || role === "Instructor") {
+      navigate(`/my-lesson?section=${searchParams.get("section")}`);
+      console.log('Close quiz question editor');
+    }
   };
 
-  const handleDone = () => {
-    // Save the quiz question
-    console.log('Quiz question saved:', {
+  const handleDone = async () => {
+    if (!question.trim() || options.length === 0 || !(role === "Admin" || role === "Instructor")) {
+      alert("Please fill all fields and ensure you have Admin or Instructor role.");
+      return;
+    }
+
+    const quizData = {
       question,
       options,
       questionType,
-      timeToAppear
-    });
+      timeToAppear,
+      videoName,
+      createdAt: "2025-06-23T01:28:00Z", // Current date and time in ISO format
+    };
+
+    try {
+      const response = await fetch("https://api.example.com/quizzes", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify(quizData),
+      });
+      if (response.ok) {
+        console.log('Quiz question saved:', quizData);
+        navigate(`/section-review?section=${searchParams.get("section")}`);
+      } else {
+        console.error("Failed to save quiz");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
     <div className="quiz-question-container">
       <div className="quiz-header">
         <h1 className='gen-quiz'>Time to Generate Quiz</h1>
-        <button className="close-button" onClick={handleClose}>
-          <span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <button className="close-button" onClick={handleClose} disabled={!(role === "Admin" || role === "Instructor")}>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
               <path d="M24 3C35.7 3 45 12.3 45 24C45 35.7 35.7 45 24 45C12.3 45 3 35.7 3 24C3 12.3 12.3 3 24 3ZM15.9 34.5L24 26.4L32.1 34.5L34.5 32.1L26.4 24L34.5 15.9L32.1 13.5L24 21.6L15.9 13.5L13.5 15.9L21.6 24L13.5 32.1L15.9 34.5Z" fill="#D72638"/>
-            </svg></span>
+            </svg>
+          </span>
         </button>
       </div>
 
@@ -62,65 +100,71 @@ import './QuizQuestionPage.css';
 
         <div className="question-form">
           <span className='input-label-quiz'>
-          <div className="input-group2 question-input">
-           
-            <input 
-              id="input-quiz"
-              type="text" 
-              placeholder="Enter Question"
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-            />
-          </div>
+            <div className="input-group2 question-input">
+              <input 
+                id="input-quiz"
+                type="text" 
+                placeholder="Enter Question"
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                disabled={!(role === "Admin" || role === "Instructor")}
+              />
+            </div>
 
-          <div className="form-controls">
-            <div className="dropdown-group">
-              <label id="type-quiz">Question Type:</label>
-              <div className="select-wrapper">
-                <select 
-                className='select-que'
-                  value={questionType}
-                  onChange={(e) => setQuestionType(e.target.value)}
-                >
-                  <option>Multiple Choice</option>
-                  <option>True/False</option>
-                  <option>Free Response</option>
-                </select>
+            <div className="form-controls">
+              <div className="dropdown-group">
+                <label id="type-quiz">Question Type:</label>
+                <div className="select-wrapper">
+                  <select 
+                    className='select-que'
+                    value={questionType}
+                    onChange={(e) => setQuestionType(e.target.value)}
+                    disabled={!(role === "Admin" || role === "Instructor")}
+                  >
+                    <option>Multiple Choice</option>
+                    <option>True/False</option>
+                    <option>Free Response</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div className="time-group">
+                <label id="set-time">Set Time</label>
+                <div className="select-wrapper">
+                  <input
+                    className='set_time' 
+                    type="text" 
+                    placeholder="Minute to appear"
+                    value={timeToAppear}
+                    onChange={(e) => setTimeToAppear(e.target.value)}
+                    disabled={!(role === "Admin" || role === "Instructor")}
+                  />
+                </div>
               </div>
             </div>
-            
-            <div className="time-group">
-              <label id="set-time">Set Time</label>
-              <div className="select-wrapper">
-                <input
-                className='set_time' 
-                  type="text" 
-                  placeholder="Minute to appear"
-                  value={timeToAppear}
-                  onChange={(e) => setTimeToAppear(e.target.value)}
-                />
-              </div>
-            </div>
-          </div>
           </span>
           <div className="options-list">
             {options.map((option, index) => (
               <div className="option-item" key={option.id}>
-                <input type="radio" name="quizOption" id={`option-${option.id}`} />
+                <input type="radio" name="quizOption" id={`option-${option.id}`} disabled={!(role === "Admin" || role === "Instructor")} />
                 <input 
                   id="option-quiz"
                   type="text" 
                   placeholder={`Option ${index + 1}`}
                   value={option.text}
                   onChange={(e) => {
-                    const updatedOptions = [...options];
-                    updatedOptions[index].text = e.target.value;
-                    setOptions(updatedOptions);
+                    if (role === "Admin" || role === "Instructor") {
+                      const updatedOptions = [...options];
+                      updatedOptions[index].text = e.target.value;
+                      setOptions(updatedOptions);
+                    }
                   }}
+                  disabled={!(role === "Admin" || role === "Instructor")}
                 />
                 <button 
                   className="remove-option" 
                   onClick={() => removeOption(option.id)}
+                  disabled={!(role === "Admin" || role === "Instructor")}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <path d="M8.75 26.25C8.0625 26.25 7.47417 26.0054 6.985 25.5163C6.49583 25.0271 6.25083 24.4383 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.5054 25.0263 23.0163 25.5163C22.5271 26.0063 21.9383 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="#CDB4DB"/>
@@ -141,35 +185,37 @@ import './QuizQuestionPage.css';
                 value={newOption}
                 onChange={(e) => setNewOption(e.target.value)}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
+                  if (e.key === 'Enter' && (role === "Admin" || role === "Instructor")) {
                     addOption();
                   }
                 }}
+                disabled={!(role === "Admin" || role === "Instructor")}
               />
             </div>
           </div>
 
           <div className="action-buttons">
-            <button className="add-button" onClick={addOption}>
+            <button className="add-button" onClick={addOption} disabled={!(role === "Admin" || role === "Instructor")}>
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <path d="M15 5C20.5138 5 25 9.48625 25 15C25 20.5138 20.5138 25 15 25C9.48625 25 5 20.5138 5 15C5 9.48625 9.48625 5 15 5ZM15 2.5C8.09625 2.5 2.5 8.09625 2.5 15C2.5 21.9037 8.09625 27.5 15 27.5C21.9037 27.5 27.5 21.9037 27.5 15C27.5 8.09625 21.9037 2.5 15 2.5ZM21.25 13.75H16.25V8.75H13.75V13.75H8.75V16.25H13.75V21.25H16.25V16.25H21.25V13.75Z" fill="#CDB4DB"/>
               </svg>
             </button>
-            <button className="remove-button">
+            <button className="remove-button" onClick={() => setOptions([])} disabled={!(role === "Admin" || role === "Instructor")}>
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <path d="M8.75 26.25C8.0625 26.25 7.47417 26.0054 6.985 25.5163C6.49583 25.0271 6.25083 24.4383 6.25 23.75V7.5H5V5H11.25V3.75H18.75V5H25V7.5H23.75V23.75C23.75 24.4375 23.5054 25.0263 23.0163 25.5163C22.5271 26.0063 21.9383 26.2508 21.25 26.25H8.75ZM21.25 7.5H8.75V23.75H21.25V7.5ZM11.25 21.25H13.75V10H11.25V21.25ZM16.25 21.25H18.75V10H16.25V21.25Z" fill="#CDB4DB"/>
               </svg>
-
             </button>
           </div>
         </div>
       </div>
 
       <div className="quiz-footer">
-        <button className="done-button" onClick={handleDone}>Done</button>
+        <button className="done-button" onClick={handleDone} disabled={!(role === "Admin" || role === "Instructor") || !question.trim() || options.length === 0}>
+          Done
+        </button>
       </div>
     </div>
   );
-};
+}
 
-export {QuizQuestionPage};
+export { QuizQuestionPage };

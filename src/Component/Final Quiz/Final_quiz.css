@@ -1,0 +1,86 @@
+.quiz_name{
+  display: flex;
+width: 645px !important;
+height: 164px !important;
+flex-direction: column !important;
+justify-content: center !important;
+flex-shrink: 0;
+}
+.nameofquiz{
+  color: #765378;
+font-family: Roboto;
+font-size: 36px !important;
+font-style: normal;
+font-weight: 500 !important;
+line-height: normal;
+
+}
+.quiz-content{
+  flex-direction: column;
+  justify-content: center !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+.sub-txt{
+  color: #5D5A6F;
+font-family: Roboto;
+font-size: 24px !important;
+font-style: normal;
+font-weight: 700 !important;
+line-height: normal;
+}
+.time-txt{
+  color: rgba(0, 0, 0, 0.73);
+font-family: Roboto;
+font-size: 24px !important;
+font-style: normal;
+font-weight: 300 !important;
+line-height: normal;
+}
+#time-txt{
+  color: #765378 !important;
+font-family: Roboto;
+font-size: 24px !important;
+font-style: normal;
+font-weight: 600 !important;
+line-height: normal;
+}
+button.btn-assig {
+  display: flex;
+  width: 247px !important;
+  height: 68.276px !important;
+  padding: 16.065px 53.55px;
+  justify-content: center;
+  align-items: center;
+  gap: 6.694px;
+  flex-shrink: 0;
+  border-radius: 66.938px !important;
+background: #765378;
+
+}
+#btn-assig{
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto !important;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+  text-decoration: none;
+}
+#grade-icon{
+  color: #765378;
+/* text-align: center; */
+font-family: Roboto;
+font-size: 36px !important;
+font-style: normal;
+font-weight: 600 !important;
+line-height: normal;
+}
+.line{
+  width: 1084px;
+  height: 1px;
+  margin: 15px;
+  text-align: center;
+  background: #D9C6E3;
+}

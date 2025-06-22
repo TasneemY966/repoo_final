@@ -750,7 +750,7 @@ p.master {
   gap: 6.26px;
   flex-shrink: 0;
   border-radius: 62.602px !important;
-  background: #765378;
+  background: #765378 !important;
   border-color: #765378;
 }
 

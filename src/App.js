@@ -1,6 +1,8 @@
 // export default App;
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
+import ProtectedRoute2 from './Component/ProtectedRoute2/ProtectedRoute2';
 
 // Component_tasneem from App.jsx 
 import  Login  from './Component/First/login';
@@ -14,13 +16,13 @@ import  ChatPage  from './Component/chat/Chatpage';
 import  ProfilePage  from './Component/profile/ProfilePage';
 import  CoursePage  from './Component/Course Page/CoursePage';
 import  Course  from './Component/Course/Course';
-// import  ContactUs  from './Component/Contact Us/ContactUs';
 import  Video  from './Component/Video/Video';
 import  Section from './Component/Section/Section';
 import  MyLesson  from './Component/MyLesson/MyLesson';
 import { Publish } from './Component/Publish/Publish';
 import  SectionReview  from './Component/Section Review/SectionReview';
 import  PublishTrack  from './Component/Publish track/PublishTrack';
+import CourseDetails from './Component/Course_Details/Course_Details';
 import { Dashboard } from './Component/Dashboard/Dashboard';
 import { ManageCourses } from './Component/Dashboard/ManageCourses';
 import { SettingsManagement } from './Component/Dashboard/SettingsManagement';
@@ -30,8 +32,13 @@ import { ManageUsers } from './Component/Dashboard/ManageUsers';
 import { ManageInstructors } from './Component/Dashboard/ManageInstructors';
 import { QuizQuestionPage } from './Component/QuizQuestionPage/QuizQuestionPage';
 import { ManageSections } from './Component/Dashboard/ManageSections';
+// import ApiComponent from './Component/ApiComponent/ApiComponent';
 
 // Component_arwa from App.js
+import UploadCourses from './Component/Upload Course/UploadCourses';
+import Quizz from './Component/Final Quiz/quiz';
+import Final_quiz from './Component/Final Quiz/Final_quiz';
+import After_quiz from './Component/Final Quiz/After_quiz';
 import Layout from './Component/Layout/Layout';
 import HomeCourses from './Component/Home_Courses/home_courses';
 import Tracks from './Component/Tracks/Tracks';
@@ -43,17 +50,18 @@ import Leaderboard from './Component/Leaderboard/Leaderboard';
 import Track_Courses from './Component/Track_Courses/Track_Courses';
 import Track_Courses2 from './Component/Track_Courses/Track_Courses2';
 import NotFound from './Component/NotFound/NotFound';
-// import Register from './Component/Register/Register';
-// import itemDetails from './Component/ItemDetails/itemDetails';
+
+const test=1
 const routers = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'home', element: <Home /> },
-      { path: 'about-us', element: <About_Us /> },
-      { path: 'home-course', element: <HomeCourses /> },
+
+      { path: 'home', element: <ProtectedRoute2 userData={test}><Home /></ProtectedRoute2>  },
+      { path: 'about-us', element: <ProtectedRoute userData={test}><About_Us /></ProtectedRoute> },
+      { path: 'home-course', element: <ProtectedRoute2 userData={test} ><HomeCourses /></ProtectedRoute2> },
       { path: 'tracks', element: <Tracks /> },
       { path: 'my-learning', element: <My_learning /> },
       { path: 'my-learning2', element: <My_learning2 /> },
@@ -65,10 +73,10 @@ const routers = createBrowserRouter([
       { path: 'course-page', element: <CoursePage /> },
       { path: 'course', element: <Course /> },
       { path: 'video', element: <Video /> },
-      // { path: 'contact-us', element: <ContactUs /> }, تم الحذف
       { path: 'account', element: <Account /> },
       { path: 'profile', element: <ProfilePage /> },
       { path: 'security', element: <Security /> },
+      // { path: 'api-test', element: <ApiComponent /> },
     ],
   },
   // Routes outside Layout (e.g., Dashboard-related)
@@ -83,11 +91,11 @@ const routers = createBrowserRouter([
   { path: 'verify-email', element: <VerifyEmail /> },
   { path: 'publish-track', element: <PublishTrack /> },
   { path: 'quiz-question-page', element: <QuizQuestionPage /> },
-
-  // { path: 'Register', element: <Register /> },
-
-  { path: 'itemdetails/:id/:mediaType', element: <itemDetails /> },
-
+  { path: 'Quizz', element: <Quizz /> },
+  { path: 'Final_quiz', element: <Final_quiz /> },
+  { path: 'After_quiz', element: <After_quiz /> },
+  { path: 'itemdetails/:id/:mediaType', element: <itemDetails /> }, 
+  { path: 'course-details', element: <CourseDetails /> },
   { path: 'sign-up', element: <SignUps /> },
   { path: 'login', element: <Login /> },
   { path: 'chat', element: <ChatPage /> },
@@ -95,6 +103,8 @@ const routers = createBrowserRouter([
   { path: 'my-lesson', element: <MyLesson /> },
   { path: 'publish', element: <Publish /> },
   { path: 'section-review', element: <SectionReview /> },
+  { path: 'upload-course', element: <UploadCourses /> },
+
   // Catch-all route for 404
   { path: '*', element: <NotFound /> },
 ]);
@@ -105,3 +115,6 @@ function App() {
 }
 
 export default App;
+
+
+

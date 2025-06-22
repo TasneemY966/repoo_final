@@ -4,16 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { RoleProvider } from '../src/Component/roleManager/roleManager';
+import { TokenProvider } from '../src/Component/tokenManager/tokenManager';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  // 
+  //   <App />
+  
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <TokenProvider>
+        <RoleProvider>
+          <App />
+        </RoleProvider>
+    </TokenProvider>
+ </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

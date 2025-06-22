@@ -1,0 +1,48 @@
+.name-quiz{
+  display: inline;
+  color: #765378;
+  font-family: Roboto;
+  font-size: 17px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal;
+}
+.ques-txt{
+  color: #000;
+/* text-align: center; */
+font-family: Roboto;
+font-size: 24px !important;
+font-style: normal;
+font-weight: 400 !important;
+line-height: normal;
+}
+#answer{
+  width: 24.75px;
+height: 24.75px;
+flex-shrink: 0;
+}
+.answer-txt{
+  color: #1F1F1F;
+font-family: Inter;
+font-size: 17.875px !important;
+font-style: normal;
+font-weight: 500 !important;
+line-height: 100%; /* 17.875px */
+}
+.btn-submitt{
+  display: flex;
+width: 151px;
+padding: 13px;
+justify-content: center;
+align-items: center;
+gap: 22px;
+border-radius: 100px;
+border: 1px solid rgba(0, 0, 0, 0.25);
+background: #FFF;
+}
+.btn-submitt:hover{
+  background: #765378;
+}
+.sub-btn{
+  text-decoration: none !important;
+}

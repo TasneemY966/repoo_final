@@ -1,0 +1,30 @@
+.but1 {
+  display: flex;
+  width: 151px !important;
+  padding: 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  text-decoration: none !important;
+}
+
+#but-reg {
+  border-radius: 100px !important;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+#but-reg:hover {
+  background-color: #765378;
+}
