@@ -5,7 +5,7 @@
 // import axios from 'axios';
 // import './login.css';
 
-// export default function Login() {
+// export default function Login(saveUserData) {
 //   const [email, setEmail] = useState('');
 //   const [password, setPassword] = useState('');
 //   const [showPassword, setShowPassword] = useState(false);
@@ -23,17 +23,17 @@
 //         email: email,
 //         password: password,
 //       }, {
-//         withCredentials: true, // Allow cookies for token
+//         withCredentials: true,
 //       });
-
+//         // {role :admin?userData = 6 : userData = 1}
 //       console.log('Response:', response.data);
 //       if (response.data.success) {
-//         // Assuming the backend returns a token or user data
 //         if (response.data.data?.accessToken) {
-//           localStorage.setItem('token', response.data.data.accessToken); // Store token if provided
+//           localStorage.setItem('token', response.data.data.accessToken);
 //         }
-//         navigate('/home-course'); // Redirect to course page or any other page after successful login
+//         navigate('/section');
 //       }
+//       saveUserData();
 //     } catch (err) {
 //       console.error('Error during login:', err.response?.data);
 //       const errorMsg = err.response?.data?.message || 'Login failed. Please check your credentials.';
@@ -86,10 +86,9 @@
 //                   value={password}
 //                   onChange={(e) => setPassword(e.target.value)}
 //                   required
-                  
 //                 />
 //                 <svg
-//                 id="eye-icon10"
+//                   id="eye-icon10"
 //                   xmlns="http://www.w3.org/2000/svg"
 //                   width="22"
 //                   height="20"
@@ -131,7 +130,7 @@
 //               <button type='button' className='signup-with-google'>
 //                 <div id='google'>
 //                   <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-//                     <g clip-path="url(#clip0_356_477)">
+//                     <g clipPath="url(#clip0_356_477)">
 //                       <path d="M23.8936 10.0146H21.5136V12.3837H19.1445V14.7637H21.5136V17.1328H23.8936V14.7637H26.2627V12.3837H23.8936V10.0146Z" fill="white"/>
 //                       <path d="M8.30825 21.4407C13.0181 21.4407 16.1468 18.1347 16.1468 13.4683C16.1468 12.934 16.0913 12.5215 16.014 12.1102H8.30934V14.9157H12.942C12.7526 16.1073 11.5392 18.4339 8.30934 18.4339C5.52672 18.4339 3.25448 16.129 3.25448 13.279C3.25448 10.4289 5.52563 8.12289 8.30934 8.12289C9.90143 8.12289 10.9592 8.80195 11.561 9.38089L13.7766 7.25448C12.35 5.91922 10.513 5.11719 8.30825 5.11719C3.7986 5.11719 0.146484 8.76931 0.146484 13.279C0.146484 17.7886 3.7986 21.4407 8.30825 21.4407Z" fill="white"/>
 //                     </g>
@@ -151,7 +150,6 @@
 //     </>
 //   );
 // }
-
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -167,36 +165,50 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+  e.preventDefault();
+  setLoading(true);
+  setError('');
 
-    try {
-      const response = await axios.post('https://localhost:7217/api/auth/signin', {
-        email: email,
-        password: password,
-      }, {
-        withCredentials: true,
-      });
-        // {role :admin?userData = 6 : userData = 1}
-      console.log('Response:', response.data);
-      if (response.data.success) {
-        if (response.data.data?.accessToken) {
-          localStorage.setItem('token', response.data.data.accessToken);
-        }
-        navigate('/section');
+  try {
+    const response = await axios.post('https://localhost:7217/api/Auth/signin', {
+      email: email,
+      password: password,
+    }, {
+      withCredentials: true,
+    });
+
+    console.log('Response:', response.data);
+    if (response.data.success) {
+      // تخزين التوكن وبيانات المستخدم
+      if (response.data.data?.token) {
+        localStorage.setItem('token', response.data.data.token);
       }
-    } catch (err) {
-      console.error('Error during login:', err.response?.data);
-      const errorMsg = err.response?.data?.message || 'Login failed. Please check your credentials.';
-      setError(errorMsg);
-      if (errorMsg.includes('not verified')) {
-        navigate('/verify-email');
+      if (response.data.data?.user) {
+        localStorage.setItem('user', JSON.stringify(response.data.data.user));
       }
-    } finally {
-      setLoading(false);
+
+      // التوجيه بناءً على دور المستخدم
+      const userRole = response.data.data?.user?.role;
+      if (userRole === 'Admin') {
+        navigate('/publish');
+      } else if (userRole === 'Instructor') {
+        navigate('/publish');
+      } else {
+        // افتراضيًا إلى الصفحة الرئيسية للطلاب
+        navigate('/my-learning');
+      }
     }
-  };
+  } catch (err) {
+    console.error('Error during login:', err.response?.data);
+    const errorMsg = err.response?.data?.message || 'Login failed. Please check your credentials.';
+    setError(errorMsg);
+    if (errorMsg.includes('not verified')) {
+      navigate('/verify-email');
+    }
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
@@ -238,9 +250,10 @@ export default function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                  
                 />
                 <svg
-                  id="eye-icon10"
+                id="eye-icon10"
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
                   height="20"
