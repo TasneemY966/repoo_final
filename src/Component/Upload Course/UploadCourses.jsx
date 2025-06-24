@@ -145,7 +145,7 @@ export default function UploadCourses() {
       </Row>
 
       <div className="users-table">
-        <div className="table-header">
+        <div className="table-header table-headd">
           <div className="header-col email-col">Course Name</div>
           <div className="header-col courses-col">Status</div>
           <div className="header-col actions-col">Actions</div>

@@ -1,0 +1,97 @@
+.videos-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-details {
+  padding: 10px;
+}
+
+.video-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 0 0 5px;
+}
+
+.video-status {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.video-actions {
+  padding: 10px;
+  text-align: right;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #34495e;
+}
+
+.action-menu {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+  z-index: 1;
+}
+
+.action-edit, .action-delete {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.action-edit:hover, .action-delete:hover {
+  background-color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .video-list {
+    grid-template-columns: 1fr;
+  }
+}

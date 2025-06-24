@@ -208,13 +208,97 @@
 // };
 
 // export default HomeCourses;
+// import React, { useEffect, useState } from "react";
+// import "./home_courses.css";
+// import { Row, Col } from "react-bootstrap";
+// import StartedCourses from "./started_courses";
+// import PopularCourses from "./popular_courses ";
+// import SkillCourses from "./skills_courses";
+// import { Link } from "react-router-dom";
+// import Navbars from "../Navbar/Navbar";
+// import axios from "axios";
+
+// const HomeCourses = () => {
+//   const [startedCourses, setStartedCourses] = useState([]);
+//   const [popularCourses, setPopularCourses] = useState([]);
+//   const [skillCourses, setSkillCourses] = useState([]);
+//   const token = localStorage.getItem("token");
+
+//   useEffect(() => {
+//     const fetchCourses = async () => {
+//       try {
+//         const response = await axios.get("https://localhost:7217/api/courses", {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         });
+
+//         const allCourses = response.data.data;
+//         setStartedCourses(allCourses.slice(0, 4));
+//         setPopularCourses(allCourses.slice(4, 8));
+//         setSkillCourses(allCourses.slice(8, 12));
+//       } catch (error) {
+//         console.error("Error fetching courses:", error);
+//       }
+//     };
+
+//     fetchCourses();
+//   }, [token]);
+
+//   return (
+//     <>
+//       <Navbars />
+//       <Row className="m-auto links_pages">
+//         <Col className="link_home"><Link to="/home-course" id="link_home">Home</Link></Col>
+//         <Col className="link_learning"><Link to="/tracks" id="link_learning">Tracks</Link> </Col>
+//         <Col className="link_learning"><Link to="/My-learning" id="link_learning">My learning</Link> </Col>
+//         <Col className="link_learning"><Link to="/Leaderboard" id="link_learning">Leaderboard</Link> </Col>
+//       </Row>
+
+//       <Row><h4 id="started_courses">Get Started with These Courses</h4></Row>
+//       <Row>
+//         {startedCourses.map((course) => (
+//           <Col md={3} key={course.id}>
+//             <Link to={`/course/${course.id}`}>
+//               <StartedCourses product={course} />
+//             </Link>
+//           </Col>
+//         ))}
+//       </Row>
+
+//       <Row><h4 id="started_courses">Most Popular Courses</h4></Row>
+//       <Row>
+//         {popularCourses.map((course) => (
+//           <Col md={3} key={course.id}>
+//             <Link to={`/course/${course.id}`}>
+//               <PopularCourses product={course} />
+//             </Link>
+//           </Col>
+//         ))}
+//       </Row>
+
+//       <Row><h4 id="started_courses">Grow Your Skill Set</h4></Row>
+//       <Row>
+//         {skillCourses.map((course) => (
+//           <Col md={3} key={course.id}>
+//             <Link to={`/course/${course.id}`}>
+//               <SkillCourses product={course} />
+//             </Link>
+//           </Col>
+//         ))}
+//       </Row>
+//     </>
+//   );
+// };
+
+// export default HomeCourses;
 import React, { useEffect, useState } from "react";
 import "./home_courses.css";
 import { Row, Col } from "react-bootstrap";
 import StartedCourses from "./started_courses";
 import PopularCourses from "./popular_courses ";
 import SkillCourses from "./skills_courses";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbars from "../Navbar/Navbar";
 import axios from "axios";
 
@@ -223,11 +307,18 @@ const HomeCourses = () => {
   const [popularCourses, setPopularCourses] = useState([]);
   const [skillCourses, setSkillCourses] = useState([]);
   const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role");
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!token || !role) {
+      navigate("/login");
+      return;
+    }
+
     const fetchCourses = async () => {
       try {
-        const response = await axios.get("/api/courses", {
+        const response = await axios.get("https://localhost:7217/api/courses", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -239,11 +330,16 @@ const HomeCourses = () => {
         setSkillCourses(allCourses.slice(8, 12));
       } catch (error) {
         console.error("Error fetching courses:", error);
+        if (error.response?.status === 401) {
+          navigate("/login");
+        }
       }
     };
 
     fetchCourses();
-  }, [token]);
+  }, [token, role, navigate]);
+
+  if (!token || !role) return null;
 
   return (
     <>

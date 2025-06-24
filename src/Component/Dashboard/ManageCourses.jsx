@@ -4,6 +4,7 @@ import './common.css';
 import {SideNav} from './SideNav';
 import { useState } from 'react';
 import {CourseFormPopup} from './CourseFormPopup';
+import { Link } from 'react-router-dom';
 
 
 
@@ -75,7 +76,7 @@ const ManageCourses = () => {
         <h1 className='mng-course'>Manage Courses</h1>
         </div>
         <div className="action-buttons">
-          <button className="create-section-btn">Create Section</button>
+         <Link className="create-section-btn" to='/section'> <button className="create-section-btn">Create Section</button></Link>
         </div>
         
         <div className="courses-table">

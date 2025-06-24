@@ -55,6 +55,7 @@ export default function Account() {
           </button>
         </div>
         <div className="settings-icons">
+          <Link to='/profile'>
           <i id="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
               <g clip-path="url(#clip0_79_211)">
@@ -74,6 +75,7 @@ export default function Account() {
               <path d="M86.2837 31.9214L88 33.6393L78.6463 42.9962C78.4965 43.1471 78.3182 43.2668 78.1219 43.3484C77.9256 43.4301 77.7151 43.4722 77.5024 43.4722C77.2898 43.4722 77.0793 43.4301 76.8829 43.3484C76.6866 43.2668 76.5084 43.1471 76.3585 42.9962L67 33.6393L68.7163 31.9231L77.5 40.7052L86.2837 31.9214Z" fill="#939292"/>
             </svg>
           </i>
+          </Link>
         </div>
       </header>
 

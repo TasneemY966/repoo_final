@@ -36,7 +36,7 @@ import { ManageUsers } from './Component/Dashboard/ManageUsers';
 import { ManageInstructors } from './Component/Dashboard/ManageInstructors';
 import { QuizQuestionPage } from './Component/QuizQuestionPage/QuizQuestionPage';
 import { ManageSections } from './Component/Dashboard/ManageSections';
-// import ApiComponent from './Component/ApiComponent/ApiComponent';
+import AllVideos from './Component/All Videos/all-videos';
 
 // Component_arwa from App.js
 import UploadCourses from './Component/Upload Course/UploadCourses';
@@ -192,6 +192,7 @@ function App() {
     { path: 'publish', element: <Publish /> },
     { path: 'section-review', element: <SectionReview /> },
     { path: 'upload-course', element: <UploadCourses /> },
+    { path: 'all-video', element: <AllVideos /> },
     { path: '*', element: <NotFound /> },
   ]);
 
